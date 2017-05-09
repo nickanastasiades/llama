@@ -1,0 +1,34 @@
+<div class="page-header">
+  <h3>Designer #<%= @designer.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>First name</dt>
+      <dd><%= @designer.first_name %></dd>
+
+      <dt>Last name</dt>
+      <dd><%= @designer.last_name %></dd>
+
+      <dt>Company</dt>
+      <dd><%= @designer.company_id %></dd>
+
+      <dt>Role</dt>
+      <dd><%= @designer.role %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/designers" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/designers/<%= @designer.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_designer/<%= @designer.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
