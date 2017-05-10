@@ -22,6 +22,7 @@ class DesignersController < ApplicationController
 
     @designer.first_name = params[:first_name]
     @designer.last_name = params[:last_name]
+    @designer.email = params[:email]
     @designer.company_id = params[:company_id]
     @designer.role = params[:role]
 
@@ -45,6 +46,7 @@ class DesignersController < ApplicationController
 
     @designer.first_name = params[:first_name]
     @designer.last_name = params[:last_name]
+    @designer.email = params[:email]
     @designer.company_id = params[:company_id]
     @designer.role = params[:role]
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509231224) do
+ActiveRecord::Schema.define(version: 20170509235452) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -26,13 +26,61 @@ ActiveRecord::Schema.define(version: 20170509231224) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
 
-  create_table "designers", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "email"
     t.integer  "company_id"
     t.string   "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.float    "hours_available"
+    t.float    "hours_used"
+    t.string   "plan"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "designers", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.integer  "company_id"
+    t.string   "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "files", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.string   "type"
+    t.string   "description"
+    t.string   "status"
+    t.float    "version"
+    t.integer  "designer_id"
+    t.float    "hours_used"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
