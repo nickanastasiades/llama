@@ -15,6 +15,10 @@
  */
 body {background: #f7f7f7;}
 a {text-decoration: none !important;}
+body {font-size: 15px;}
+.footer-row {text-align: center; margin-top: 40px;}
+.copyright {text-align: center; color: #6a737c; font-size: 12px; margin-top: 8px; margin-bottom: 50px;}
+.footer-menu {text-transform: uppercase; font-weight: 600; font-size: 12px; margin: 5px; color: #6a737c !important;}
 .navbar-default {background: none; margin-bottom: 28px;}
 .navbar-default .navbar-nav>li>a {color: #33414d; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;}
 .new-project-btn {background-color: #16d4d4; border-radius: 100px; padding: 12px 30px !important; margin-top: 8px; margin-left: 10px;}
@@ -23,10 +27,14 @@ a {text-decoration: none !important;}
 .main-logo {width: 40px;}
 .navbar-brand {padding: 7px 15px;}
 .navbar {margin-top: 10px}
-.dark-body {background-color: #33414d; padding: 30px 4%; margin-top: 50px;}
-.light-body {background-color: #fff; padding: 30px 4%;}
+.dark-body {background-color: #33414d; padding: 30px 4%; margin-top: 50px; box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);}
+.light-body {background-color: #fff; padding: 30px 4%; min-height: 500px; box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);}
 .hello {color: #fff; font-weight: 600; font-size: 40px; margin-bottom: 12px; margin-top: 30px;}
 .intro {color: #fff; font-weight: 300; font-size: 40px; margin-bottom: 12px; margin-bottom: 40px; line-height: 50px;}
 .blue-btn-lg {background-color: #16d4d4; color: #33414d !important; border-radius: 100px; padding: 16px 32px; text-transform: uppercase; font-size: 16px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 50px;}
 .blue-btn-lg:hover, .blue-btn-lg:focus, .blue-btn-lg:active {background-color: #1bdcdc; color: #33414d !important;}
-.page-title {font-weight: 600;color: #33414d;margin-top: 16px;}
+.page-title {font-weight: 600;color: #33414d;margin-top: 16px; font-size: 36px; margin-bottom: 20px;}
+.table-name {font-size: 22px; font-weight: 300}
+.projects-table > tbody > tr > td {vertical-align: middle; border-bottom: 1px solid #dfdfe1; height: 65px;}
+.projects-table > tbody > tr > td a {display:block; width:100%;}
+}

@@ -2,6 +2,14 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
 
+    if @status == "Completed"
+      @status_label = "Success"
+    elsif @status == "In Progress"
+      @status_label = "Warning"
+    else
+      @status_label = "Default"
+    end
+
     render("projects/index.html.erb")
   end
 
