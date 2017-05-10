@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
     @item = Item.new
 
     @item.project_id = params[:project_id]
-    @item.name = params[:name]
+    @item.name = params[:url].original_filename
     @item.description = params[:description]
     @item.url = params[:url]
 

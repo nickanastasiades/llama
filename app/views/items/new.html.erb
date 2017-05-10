@@ -7,9 +7,11 @@
     </div>
   <% end %>
 <% end %>
-<form action="/create_item" method="post" enctype="multipart/form-data">
 <div class="row">
   <div class="col-md-9 light-body">
+
+    <form action="/create_item" method="post" enctype="multipart/form-data">
+
     <div class="row">
       <div class="col-md-2 progresss mobile-only">
         <img src="/images/progress-3.png" width="100"/>
@@ -28,46 +30,41 @@
 
       <!-- Label and input for name -->
       <div class="form-group">
-        <label for="name" class="control-label">
-          Name
-        </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @item.name %>">
-      </div>
-
-      <!-- Label and input for description -->
-      <div class="form-group">
-        <label for="description" class="control-label">
-          Description
-        </label>
-
-        <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @item.description %>">
+        <input type="hidden" id="name" name="name" placeholder="Name" class="form-control" value="<%= @item.name %>">
       </div>
 
         <!-- Label and input for name -->
         <div class="form-group">
-          <label for="name" class="control-label">
-            Project ID
-          </label>
 
-          <input type="text" id="project_id" name="project_id" placeholder="Project ID" class="form-control" value="<%= @item.project_id %>">
+          <input type="hidden" id="project_id" name="project_id" placeholder="Project ID" class="form-control" value="<%= @item.project_id %>">
         </div>
 
         <!-- Label and input for upload -->
         <div class="form-group">
-          <label for="description" class="control-label">
-            Upload File
-          </label>
 
-<input name ="url" type="file" class="form-control">
+<input name ="url" type="file" class="form-control" required>
 
       </div>
 
+<!-- Label and input for description -->
+<div class="form-group">
+  <label for="description" class="control-label">
+    Describe Your File
+  </label>
+
+  <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @item.description %>">
+</div>
+
+
+<button type="submit" class="blue-btn-lg">Upload</button>
+
+</form>
+
   </div>
   <div class="col-md-3 dark-body scrollify no-padding text-center">
-    <button class="big-next"><h2 class="next-btn"><img src="/images/next-arrow.png" style="width: 70px;"><br>
-      Finish Up</h2><h4 class="next-sub-btn">Woohoo!</h4></button>
+    <a class="big-next" href="/projects"><h2 class="next-btn"><img src="/images/next-arrow.png" style="width: 70px;"><br>
+      Finish Up</h2><h4 class="next-sub-btn">Woohoo!</h4></a>
     </div>
 
 </div>
-</form>

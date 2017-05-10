@@ -40,3 +40,8 @@
   text-align: center;
   margin: 15px 0px;
 }
+
+input[type="file"] {
+  height: 180px;
+  padding: 75px 30px;
+}
