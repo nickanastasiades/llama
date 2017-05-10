@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
+ *= require dropzone
  */
 body {background: #f7f7f7;}
 a {text-decoration: none !important;}
