@@ -1,3 +1,13 @@
+<!-- Validation failure messages -->
+<% if @item.errors.any? %>
+  <% @item.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+<form action="/create_item" method="post">
 <div class="row">
   <div class="col-md-9 light-body">
     <div class="row">
@@ -12,14 +22,27 @@
   </div>
 </div>
 
-<%= form_for(@item, html: { multipart: true, class: "dropzone"}) do |f|  %>
-<div class="fallback">
-<%= f.file_field :image %><br>
-<%= f.submit "Upload" %>
-</div>
-<% end %>
+      <!-- Hidden input for authenticity token to protect from forgery -->
 
-<br>
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for name -->
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Name
+        </label>
+
+        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @item.name %>">
+      </div>
+
+      <!-- Label and input for description -->
+      <div class="form-group">
+        <label for="description" class="control-label">
+          Description
+        </label>
+
+        <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @item.description %>">
+      </div>
 
   </div>
   <div class="col-md-3 dark-body scrollify no-padding text-center">
@@ -28,3 +51,4 @@
     </div>
 
 </div>
+</form>

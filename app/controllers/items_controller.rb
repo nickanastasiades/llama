@@ -17,37 +17,21 @@ class ItemsController < ApplicationController
     render("items/new.html.erb")
   end
 
-
   def create
-    	@item = Item.create(item_params)
-    	if @item.save
-    	  render json: { message: "success" }, :status => 200
-    	else
-    	  #  you need to send an error header, otherwise Dropzone
-            #  will not interpret the response as an error:
-    	  render json: { error: @item.errors.full_messages.join(',')}, :status => 400
-    	end
+    @item = Item.new
+
+    @item.project_id = params[:project_id]
+    @item.name = params[:name]
+    @item.description = params[:description]
+
+    save_status = @item.save
+
+    if save_status == true
+      redirect_to("/items/#{@item.id}", :notice => "Item created successfully.")
+    else
+      render("items/new.html.erb")
     end
-
-    private
-      def item_params
-      	params.require(:item).permit(:image)
-      end
-
-#  def create
-#    @item = Item.new
-#
-#    @item.project_id = params[:project_id]
-#    @item.name = params[:name]
-#    @item.description = params[:description]
-#
-#    save_status = @item.save
-#
-##      redirect_to("/items/#{@item.id}", :notice => "Item created successfully.")
-  #  else
-  #    render("items/new.html.erb")
-  #  end
-  #end
+  end
 
   def edit
     @item = Item.find(params[:id])
