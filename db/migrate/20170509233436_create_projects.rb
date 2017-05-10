@@ -2,7 +2,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
   def change
     create_table :projects do |t|
       t.string :title
-      t.string :type
+      t.string :project_type
       t.string :description
       t.string :status
       t.float :version
