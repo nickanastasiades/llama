@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # Routes for the Item resource:
   # CREATE
-  get "/items/new/:id", :controller => "items", :action => "new"
+  get "/items/new/:project_id", :controller => "items", :action => "new"
   post "/create_item", :controller => "items", :action => "create"
 
   # READ
@@ -14,27 +14,10 @@ Rails.application.routes.draw do
 
   # UPDATE
   get "/items/:id/edit", :controller => "items", :action => "edit"
-  post "/update_item/:id", :controller => "items", :action => "update"
+  post "/update_item/:project_id", :controller => "items", :action => "update"
 
   # DELETE
   get "/delete_item/:id", :controller => "items", :action => "destroy"
-  #------------------------------
-
-  # Routes for the File resource:
-  # CREATE
-  get "/files/new", :controller => "files", :action => "new"
-  post "/create_file", :controller => "files", :action => "create"
-
-  # READ
-  get "/files", :controller => "files", :action => "index"
-  get "/files/:id", :controller => "files", :action => "show"
-
-  # UPDATE
-  get "/files/:id/edit", :controller => "files", :action => "edit"
-  post "/update_file/:id", :controller => "files", :action => "update"
-
-  # DELETE
-  get "/delete_file/:id", :controller => "files", :action => "destroy"
   #------------------------------
 
   # Routes for the Designer resource:

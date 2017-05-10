@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
     @item.project_id = params[:project_id]
     @item.name = params[:name]
     @item.description = params[:description]
+    @item.url = params[:url]
 
     save_status = @item.save
 

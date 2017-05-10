@@ -7,7 +7,7 @@
     </div>
   <% end %>
 <% end %>
-<form action="/create_item" method="post">
+<form action="/create_item" method="post" enctype="multipart/form-data">
 <div class="row">
   <div class="col-md-9 light-body">
     <div class="row">
@@ -42,6 +42,25 @@
         </label>
 
         <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @item.description %>">
+      </div>
+
+        <!-- Label and input for name -->
+        <div class="form-group">
+          <label for="name" class="control-label">
+            Project ID
+          </label>
+
+          <input type="text" id="project_id" name="project_id" placeholder="Project ID" class="form-control" value="<%= @item.project_id %>">
+        </div>
+
+        <!-- Label and input for upload -->
+        <div class="form-group">
+          <label for="description" class="control-label">
+            Upload File
+          </label>
+
+<input name ="url" type="file" class="form-control">
+
       </div>
 
   </div>
