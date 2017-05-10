@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # Routes for the Item resource:
   # CREATE
-  get "/items/new", :controller => "items", :action => "new"
+  get "/items/new/:id", :controller => "items", :action => "new"
   post "/create_item", :controller => "items", :action => "create"
 
   # READ

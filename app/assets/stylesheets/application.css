@@ -42,5 +42,9 @@ body {font-size: 15px;}
 .big-next {border-radius: 0px; background: none; height: 100%; width: 100%;}
 .big-next:hover {background-color: #3b4a57 !important; background-image: none !important;}
 .next-btn {color: #fff; font-weight: 600; font-size: 40px; margin-bottom: 12px; margin-top: 30px;}
-.next-sub-btn {color: #fff; font-weight: 500; font-size: 16px; margin-bottom: 40px;;}
+.next-sub-btn {color: #fff; font-weight: 500; font-size: 16px; margin-bottom: 40px;}
+form input[type=text], form input[type=password], form input[type=email], form input[type=number], form input[type=url], form input[type=tel], form input[type=date], form input[type=time], form textarea {box-shadow: none; border: 2px solid #dce4ec; width: 90%;}
+form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=number]:focus, form input[type=url]:focus, form input[type=tel]:focus, form input[type=date]:focus, form input[type=time]:focus, form textarea:focus {box-shadow: none; border: 2px solid #2c3e50;}
+.form-control {width: 90%}
+label {margin-bottom: 5px; font-weight: 600;}
 }
