@@ -5149,3 +5149,2201 @@ Processing by ProjectsController#start as HTML
 Completed 200 OK in 289ms (Views: 287.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:27:43 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 342ms (Views: 339.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:29:57 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 216ms (Views: 213.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:30:26 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 185ms (Views: 184.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-09 23:37:47 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (7.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 840ms (Views: 800.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-09 23:45:59 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 485ms (Views: 470.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:47:27 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 342ms (Views: 339.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:49:52 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 367ms (Views: 349.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:52:56 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 478ms (Views: 468.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:55:42 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 235ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:56:02 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 281ms (Views: 279.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:57:48 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 479ms (Views: 469.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=ynMtWv%2F%2B%2FFHuicCD1BO%2B5XdUGeGFY4Z6AbmW0krIfqmHLJKl6bqVzw6NoJ2ngQQmCpnRKSfVA2lUj71aZ%2FQ%2B%2FA%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-09 23:57:53 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"ynMtWv/+/FHuicCD1BO+5XdUGeGFY4Z6AbmW0krIfqmHLJKl6bqVzw6NoJ2ngQQmCpnRKSfVA2lUj71aZ/Q+/A==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 247ms (Views: 246.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-09 23:58:18 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 231ms (Views: 229.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-05-09 23:58:22 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 254ms (Views: 247.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for ::1 at 2017-05-09 23:58:23 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 203ms (Views: 202.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-09 23:58:24 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 292ms (Views: 290.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:02:37 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 853ms (Views: 833.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:05:27 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 243ms (Views: 242.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:05:52 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 246ms (Views: 244.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:06:21 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 267ms (Views: 265.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:06:29 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 175ms (Views: 174.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:06:37 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 189ms (Views: 187.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:07:04 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 180ms (Views: 179.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:08:58 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 490ms (Views: 475.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=9UeGTnjeQjG%2BrTkLP3yO9vYxDzCYwAeL%2FBE6sCWcwQi4GDmxbporr16pWRVM7jQ1i%2FzH%2BDp2gpipJxE4CKCBXQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:09:07 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"9UeGTnjeQjG+rTkLP3yO9vYxDzCYwAeL/BE6sCWcwQi4GDmxbporr16pWRVM7jQ1i/zH+Dp2gpipJxE4CKCBXQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 268ms (Views: 266.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:09:13 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 162ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=28mGVx7BXEa1NodujQ1OJjDkJfY4IQwgwkWK%2F%2FglsMiWljmoCIU12FUy53D%2Bn%2FTlTSntPpqXiTOXc6F31RnwnQ%3D%3D&project_type=Search+Engine+Optimization" for ::1 at 2017-05-10 00:09:18 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"28mGVx7BXEa1NodujQ1OJjDkJfY4IQwgwkWK//glsMiWljmoCIU12FUy53D+n/TlTSntPpqXiTOXc6F31RnwnQ==", "project_type"=>"Search Engine Optimization"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 155ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:10:28 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 198ms (Views: 194.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:10:46 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 329ms (Views: 328.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:12:18 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 365ms (Views: 355.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:14:45 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 391ms (Views: 388.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:14:53 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 163ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:15:30 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 168ms (Views: 166.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:15:40 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 192ms (Views: 190.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:16:16 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 223ms (Views: 221.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:17:23 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 200ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:18:03 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 222ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:19:20 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 728ms (Views: 710.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:19:25 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 449ms (Views: 438.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:19:28 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 305ms (Views: 303.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=AvOOO4E0z0PEFQecdHAFSlAfxTrvR7LxX6ZI%2BTteFe1PrDHEl3Cm3SQRZ4IH4r%2BJLdIN8k3xN%2BIKkGNxFmJVuA%3D%3D&project_type=Website+Update" for ::1 at 2017-05-10 00:19:36 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"AvOOO4E0z0PEFQecdHAFSlAfxTrvR7LxX6ZI+TteFe1PrDHEl3Cm3SQRZ4IH4r+JLdIN8k3xN+IKkGNxFmJVuA==", "project_type"=>"Website Update"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:23:53 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 593ms (Views: 583.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/progress-1.png" for ::1 at 2017-05-10 00:23:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/progress-1.png"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [60 times] (102.7ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (265.6ms)
+Started GET "/images/progress-1.png" for ::1 at 2017-05-10 00:23:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/progress-1.png"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [60 times] (68.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.4ms)
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:24:09 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 212ms (Views: 211.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:24:54 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 215ms (Views: 213.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:25:30 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 211ms (Views: 210.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:25:56 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 164ms (Views: 162.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:26:19 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 204ms (Views: 203.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:27:46 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 222ms (Views: 217.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:28:25 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 386ms (Views: 385.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:28:41 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 277ms (Views: 275.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:29:13 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 201ms (Views: 199.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:29:30 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 168ms (Views: 166.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:30:11 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 362ms (Views: 349.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:31:12 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 438ms (Views: 427.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:31:27 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 360ms (Views: 358.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:31:49 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 238ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:31:57 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 251ms (Views: 248.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:32:05 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 256ms (Views: 254.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:32:24 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 163ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:33:03 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 319ms (Views: 317.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:33:43 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 371ms (Views: 360.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:33:53 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 194ms (Views: 191.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:34:19 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 219ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=oIfpzXvW3BMcMurscLEBVrl9PxJevptjMySyYEDr8RTt2FYybZK1jfw2ivIDI7uVxLD32vwIHnBmEpnobdexQQ%3D%3D&project_type=Search+Engine+Optimization" for ::1 at 2017-05-10 00:34:24 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"oIfpzXvW3BMcMurscLEBVrl9PxJevptjMySyYEDr8RTt2FYybZK1jfw2ivIDI7uVxLD32vwIHnBmEpnobdexQQ==", "project_type"=>"Search Engine Optimization"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 164ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-05-10 00:35:52 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (10.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 353ms (Views: 315.5ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:35:55 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 290ms (Views: 288.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:35:56 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 246ms (Views: 244.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:36:14 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 135ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=vzcuHy6zhBp5q5bczMn%2F5YxOqomYcX7WOZVaI0OsxIryaJHgOPfthJmv9sK%2FW0Um8YNiQTrH%2B8Vso3GrbpCE3w%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:36:17 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"vzcuHy6zhBp5q5bczMn/5YxOqomYcX7WOZVaI0OsxIryaJHgOPfthJmv9sK/W0Um8YNiQTrH+8Vso3GrbpCE3w==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 150ms (Views: 149.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:36:20 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 188ms (Views: 187.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2" for ::1 at 2017-05-10 00:36:21 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 241ms (Views: 239.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:36:22 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 366ms (Views: 363.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:36:23 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 244ms (Views: 243.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:36:34 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 127ms (Views: 126.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=CTxg28kGlF6xMx0S4xuRPhR0OmrStR0YPWRo%2F7WdLoNEY98k30L9wFE3fQyQiSv9abnyonADmAtoUkN3mKFu1g%3D%3D&project_type=Logo+%2F+Branding" for ::1 at 2017-05-10 00:36:38 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"CTxg28kGlF6xMx0S4xuRPhR0OmrStR0YPWRo/7WdLoNEY98k30L9wFE3fQyQiSv9abnyonADmAtoUkN3mKFu1g==", "project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 144ms (Views: 143.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:36:43 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 219ms (Views: 218.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:36:45 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 273ms (Views: 272.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:36:55 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 152ms (Views: 151.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=qIlq8%2FCt8Wan%2B186mtW2ETrhxd6biIfqWxiCu6ajhfnl1tUM5umY%2BEf%2FPyTpRwzSRywNFjk%2BAvkOLqkzi5%2FFrA%3D%3D&project_type=Website+Update" for ::1 at 2017-05-10 00:36:59 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"qIlq8/Ct8Wan+186mtW2ETrhxd6biIfqWxiCu6ajhfnl1tUM5umY+Ef/PyTpRwzSRywNFjk+AvkOLqkzi5/FrA==", "project_type"=>"Website Update"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 136ms (Views: 134.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:37:31 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 198ms (Views: 197.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=YzdKKGF9AQEZFXoPQolNTHHsI1f%2F5LkiKaQyVCqyHXAuaPXXdzlon%2FkRGhExG%2FePDCHrn11SPDF8khncB45dJQ%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 00:37:36 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"YzdKKGF9AQEZFXoPQolNTHHsI1f/5LkiKaQyVCqyHXAuaPXXdzlon/kRGhExG/ePDCHrn11SPDF8khncB45dJQ==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 239ms (Views: 238.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:37:38 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 232ms (Views: 230.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:37:39 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 230ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:37:54 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 315ms (Views: 313.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:37:55 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 408ms (Views: 406.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:38:29 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 158ms (Views: 157.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=2LA20gtAkYttr5VcrrcAdjpJer1FhvanVyTTVcahEXyV74ktHQT4FY2r9ULdJbq1R4Sydecwc7QCEvjd651RKQ%3D%3D" for ::1 at 2017-05-10 00:38:32 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"2LA20gtAkYttr5VcrrcAdjpJer1FhvanVyTTVcahEXyV74ktHQT4FY2r9ULdJbq1R4Sydecwc7QCEvjd651RKQ=="}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 148ms (Views: 146.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:38:34 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (12.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 181ms (Views: 166.9ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:38:35 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 237ms (Views: 235.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:38:47 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 159ms (Views: 157.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=MHwq1CIzVf4WzqccyDMtz%2FA09K0v%2FZjAuTNJbsozV9t9I5UrNHc8YPbKxwK7oZcMjfk8ZY1LHdPsBWLm5w8Xjg%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:38:51 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"MHwq1CIzVf4WzqccyDMtz/A09K0v/ZjAuTNJbsozV9t9I5UrNHc8YPbKxwK7oZcMjfk8ZY1LHdPsBWLm5w8Xjg==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 132ms (Views: 131.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:39:03 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 167ms (Views: 166.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:39:05 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 162ms (Views: 161.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:39:07 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 182ms (Views: 181.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:39:09 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 216ms (Views: 214.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:39:29 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 163ms (Views: 162.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:39:32 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 186ms (Views: 185.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:39:33 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 311ms (Views: 310.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:40:05 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 342ms (Views: 341.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=U1QqzfauaMaAeKEs5kzQWH1Nrq8Clye96c3rUsG%2BP8EeC5Uy4OoBWGB8wTKV3mqbAIBmZ6Ahoq68%2B8Da7IJ%2FlA%3D%3D" for ::1 at 2017-05-10 00:40:10 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"U1QqzfauaMaAeKEs5kzQWH1Nrq8Clye96c3rUsG+P8EeC5Uy4OoBWGB8wTKV3mqbAIBmZ6Ahoq68+8Da7IJ/lA=="}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 195ms (Views: 194.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:40:12 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 238ms (Views: 236.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:40:13 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 192ms (Views: 190.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:40:21 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 262ms (Views: 261.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:44:11 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 419ms (Views: 406.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=ew3szgo1r5xG1C4E8krOYcn62JljXM%2BuSkar19bBas42UlMxHHHGAqbQThqB2HSitDcQUcHqSr0fcIBf%2B%2F0qmw%3D%3D" for ::1 at 2017-05-10 00:44:15 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"ew3szgo1r5xG1C4E8krOYcn62JljXM+uSkar19bBas42UlMxHHHGAqbQThqB2HSitDcQUcHqSr0fcIBf+/0qmw=="}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 182ms (Views: 180.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=ew3szgo1r5xG1C4E8krOYcn62JljXM%2BuSkar19bBas42UlMxHHHGAqbQThqB2HSitDcQUcHqSr0fcIBf%2B%2F0qmw%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:44:19 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"ew3szgo1r5xG1C4E8krOYcn62JljXM+uSkar19bBas42UlMxHHHGAqbQThqB2HSitDcQUcHqSr0fcIBf+/0qmw==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 181ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:44:21 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 234ms (Views: 232.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:44:22 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 190ms (Views: 189.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=Qczmuiqbbh4DuSEyvEavzDc2HKsk4jm6hQdv4bWAdJAMk1lFPN8HgOO9QSzP1BUPSvvUY4ZUvKnQMURpmLw0xQ%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 00:44:24 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"Qczmuiqbbh4DuSEyvEavzDc2HKsk4jm6hQdv4bWAdJAMk1lFPN8HgOO9QSzP1BUPSvvUY4ZUvKnQMURpmLw0xQ==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 157ms (Views: 155.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:44:41 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 211ms (Views: 210.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:44:43 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 270ms (Views: 269.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=lYFQIvarLwYk4PXxujaaoOsCMKjYEsWzFE46osIBRvHY3u%2Fd4O9GmMTkle%2FJpCBjls%2F4YHqkQKBBeBEq7z0GpA%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:44:46 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"lYFQIvarLwYk4PXxujaaoOsCMKjYEsWzFE46osIBRvHY3u/d4O9GmMTkle/JpCBjls/4YHqkQKBBeBEq7z0GpA==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 182ms (Views: 181.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:44:58 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 258ms (Views: 254.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-05-10 00:45:00 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 241ms (Views: 239.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/start" for ::1 at 2017-05-10 00:45:05 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 214ms (Views: 212.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:45:11 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.3ms)
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:45:12 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 210ms (Views: 208.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 190ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:47:33 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 776ms (Views: 759.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:51:35 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 820ms (Views: 785.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:54:54 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 471ms (Views: 454.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:55:16 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 269ms (Views: 267.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:55:34 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 134ms (Views: 132.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:56:22 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 244ms (Views: 242.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:57:17 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 459ms (Views: 457.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:57:38 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 189ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=FQN%2B3K%2Feta82uZO5%2FMATB4asEL7%2Fi9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE%2B2HYdl09X2LJZwlCuhZoyQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:57:43 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"FQN+3K/eta82uZO5/MATB4asEL7/i9pxnFEiypcqKJxYXMEjuZrcMda986ePUqnE+2HYdl09X2LJZwlCuhZoyQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 171ms (Views: 170.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:57:50 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (4.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 178ms (Views: 171.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 00:57:57 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 180ms (Views: 179.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:58:03 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 213ms (Views: 212.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=WHyvCI2bCtOOsRMXxtZ9lskk8aTFure0E8OCYLnf6pAVIxD3m99jTW61cwm1RMdVtOk5bGcMMqdG9anolOOqxQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:58:05 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"WHyvCI2bCtOOsRMXxtZ9lskk8aTFure0E8OCYLnf6pAVIxD3m99jTW61cwm1RMdVtOk5bGcMMqdG9anolOOqxQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 199ms (Views: 198.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=WHyvCI2bCtOOsRMXxtZ9lskk8aTFure0E8OCYLnf6pAVIxD3m99jTW61cwm1RMdVtOk5bGcMMqdG9anolOOqxQ%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 00:58:37 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"WHyvCI2bCtOOsRMXxtZ9lskk8aTFure0E8OCYLnf6pAVIxD3m99jTW61cwm1RMdVtOk5bGcMMqdG9anolOOqxQ==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 247ms (Views: 246.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-10 00:58:58 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"0eezmLH8yy/9BTm/wUZSjLf22RHDXJkQ3HF8GWrk5z2cuAxnp7iisR0BWaGy1OhPyjsR2WHqHAOJR1eRR9inaA==", "title"=>"test", "project_type"=>"Social Media Postings", "description"=>"test", "status"=>"Not Started", "version"=>"1.0"}
+  [1m[35m (6.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "test"], ["project_type", "Social Media Postings"], ["description", "test"], ["status", "Not Started"], ["version", 1.0], ["created_at", 2017-05-10 05:58:58 UTC], ["updated_at", 2017-05-10 05:58:58 UTC]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/4
+Completed 302 Found in 112ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/projects/4" for ::1 at 2017-05-10 00:58:58 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 284ms (Views: 279.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for ::1 at 2017-05-10 00:59:07 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (10.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 227ms (Views: 216.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 00:59:12 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 195ms (Views: 194.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 00:59:14 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 154ms (Views: 152.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:04:55 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 583ms (Views: 571.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/bring-it.png" for ::1 at 2017-05-10 01:04:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/bring-it.png"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.3ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [60 times] (116.8ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.0ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (333.1ms)
+Started GET "/images/bring-it.png" for ::1 at 2017-05-10 01:04:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/bring-it.png"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [60 times] (53.1ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.4ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (187.4ms)
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:05:16 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 163ms (Views: 161.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:06:01 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 434ms (Views: 423.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:06:14 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 283ms (Views: 279.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:06:20 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 378ms (Views: 376.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:07:03 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 230ms (Views: 227.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:08:21 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 327ms (Views: 324.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:08:36 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 279ms (Views: 277.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:10:24 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 539ms (Views: 526.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:10:59 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 253ms (Views: 251.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:11:39 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 480ms (Views: 452.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:12:32 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 235ms (Views: 234.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:13:01 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 175ms (Views: 174.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:13:19 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 183ms (Views: 181.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:13:34 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 214ms (Views: 213.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:13:41 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 200ms (Views: 198.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=JgZ2zOSSg6ZyL9%2FL9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO%2FIvhcCHw%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 01:14:14 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"JgZ2zOSSg6ZyL9/L9kNNwRBrmWq6d2bTZn7EQJMrQkprWckz8tbqOJIrv9WF0fcCbaZRohjB48AzSO/IvhcCHw==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 143ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:14:32 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 227ms (Views: 218.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/4" for ::1 at 2017-05-10 01:14:35 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 306ms (Views: 299.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:14:37 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 476ms (Views: 474.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/3" for ::1 at 2017-05-10 01:14:43 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 315ms (Views: 308.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3/edit" for ::1 at 2017-05-10 01:14:44 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 274ms (Views: 271.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/update_project/3" for ::1 at 2017-05-10 01:14:49 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"authenticity_token"=>"rBoVGwy57fyEABZbv7idSX5ROZ+Xc5zWhTjaD82kE5PhRarkGv2EYmQEdkXMKieKA5zxVzXFGcXQDvGH4JhTxg==", "title"=>"New Facebook post", "project_type"=>"Social Media", "description"=>"Please do this", "status"=>"Not Started", "version"=>"1.0", "designer_id"=>"0", "hours_used"=>"0", "id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[33mUPDATE "projects" SET "hours_used" = ?, "updated_at" = ? WHERE "projects"."id" = ?[0m  [["hours_used", 0.0], ["updated_at", 2017-05-10 06:14:49 UTC], ["id", 3]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 21ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/projects/3" for ::1 at 2017-05-10 01:14:49 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 219ms (Views: 217.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:14:51 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (17.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 211ms (Views: 193.3ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 01:15:10 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 275ms (Views: 273.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=R%2BRX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu%2BgjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 01:15:25 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"R+RX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu+gjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 140ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=R%2BRX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu%2BgjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 01:15:45 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"R+RX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu+gjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 145ms (Views: 144.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=R%2BRX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu%2BgjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 01:17:05 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"R+RX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu+gjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 234ms (Views: 232.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=R%2BRX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu%2BgjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 01:17:16 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"R+RX3HchHuFrWFoD8bwIxFOWEJHXZL8phB2shWENuxcKu+gjYWV3f4tcOh2CLrIHLlvYWXXSOjrRK4cNTDH7Qg==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 208ms (Views: 207.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:20:45 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (4.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 631ms (Views: 615.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/projects/3" for ::1 at 2017-05-10 01:20:54 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 221ms (Views: 218.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:20:56 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 357ms (Views: 356.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 01:20:57 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 201ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=AMKTMn8gWTl6x0%2BMZE5vTFAXYFmFjbo%2FBZjo9uSGy0FNnSzNaWQwp5rDL5IX3NWPLdqokSc7PyxQrsN%2BybqLFA%3D%3D&project_type=Graphics+%2F+Icons" for ::1 at 2017-05-10 01:21:00 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"AMKTMn8gWTl6x0+MZE5vTFAXYFmFjbo/BZjo9uSGy0FNnSzNaWQwp5rDL5IX3NWPLdqokSc7PyxQrsN+ybqLFA==", "project_type"=>"Graphics / Icons"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 141ms (Views: 140.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-10 01:21:19 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"cLuJaiC3ma4dLCTNjqCysHIB8NgGaurVxtslaRAYGx895DaVNvPwMP0oRNP9MghzD8w4EKTcb8aT7Q7hPSRbSg==", "title"=>"", "project_type"=>"Graphics / Icons", "description"=>"", "status"=>"Not Started", "version"=>"1.0"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["project_type", "Graphics / Icons"], ["description", ""], ["status", "Not Started"], ["version", 1.0], ["created_at", 2017-05-10 06:21:19 UTC], ["updated_at", 2017-05-10 06:21:19 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/5
+Completed 302 Found in 13ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/projects/5" for ::1 at 2017-05-10 01:21:19 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 132ms (Views: 128.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:21:24 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 214ms (Views: 212.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:23:50 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 391ms (Views: 379.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-05-10 01:24:15 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 406ms (Views: 403.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:24:18 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 368ms (Views: 366.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1" for ::1 at 2017-05-10 01:24:29 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 299ms (Views: 297.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:24:31 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 305ms (Views: 303.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 01:24:32 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 223ms (Views: 222.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=YJwf%2Bq%2B2OicAqiTjMTBuWvXjLUuv6ntkp5p9zoZryIAtw6AFufJTueCuRP1CotSZiC7lgw1c%2FnfyrFZGq1eI1Q%3D%3D&project_type=Flyers%2C+Cards+or+Brochures" for ::1 at 2017-05-10 01:24:34 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"YJwf+q+2OicAqiTjMTBuWvXjLUuv6ntkp5p9zoZryIAtw6AFufJTueCuRP1CotSZiC7lgw1c/nfyrFZGq1eI1Q==", "project_type"=>"Flyers, Cards or Brochures"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 129ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-10 01:24:43 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"NEyxkLG0hdaKaV9fNcjk1Atnz68XHcr83rGVsxIuXNJ5Ew5vp/DsSGptP0FGWl4XdqoHZ7WrT++Lh747PxIchw==", "title"=>"", "project_type"=>"Flyers, Cards or Brochures", "description"=>"", "status"=>"Not Started", "version"=>"1.0"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["project_type", "Flyers, Cards or Brochures"], ["description", ""], ["status", "Not Started"], ["version", 1.0], ["created_at", 2017-05-10 06:24:43 UTC], ["updated_at", 2017-05-10 06:24:43 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/6
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/6" for ::1 at 2017-05-10 01:24:43 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 129ms (Views: 125.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files" for ::1 at 2017-05-10 01:25:10 -0500
+Processing by FilesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for File:Class):
+  
+app/controllers/files_controller.rb:3:in `index'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.0ms)
+Started GET "/items/new" for ::1 at 2017-05-10 01:25:17 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 185ms (Views: 171.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:35:04 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 599ms (Views: 583.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/projects/3" for ::1 at 2017-05-10 01:35:08 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 354ms (Views: 350.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 01:35:10 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (5.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 377ms (Views: 370.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 01:35:15 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 206ms (Views: 204.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=fsuNaVtxTOw3wabPwdISjo32xieIaxCimx12J%2BwieR4zlDKWTTUlctfFxtGyQKhN8DsO7yrdlbHOK12vwR45Sw%3D%3D&project_type=Flyers%2C+Cards+or+Brochures" for ::1 at 2017-05-10 01:35:18 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"fsuNaVtxTOw3wabPwdISjo32xieIaxCimx12J+wieR4zlDKWTTUlctfFxtGyQKhN8DsO7yrdlbHOK12vwR45Sw==", "project_type"=>"Flyers, Cards or Brochures"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 170ms (Views: 168.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-10 01:35:35 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"OoHKD5assqceEVyQfT3TgZeanUGld1+3V/yhKsYvojl33nXwgOjbOf4VPI4Or2lC6ldViQfB2qQCyoqi6xPibA==", "title"=>"", "project_type"=>"Flyers, Cards or Brochures", "description"=>"", "status"=>"Not Started", "version"=>"1.0"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["project_type", "Flyers, Cards or Brochures"], ["description", ""], ["status", "Not Started"], ["version", 1.0], ["created_at", 2017-05-10 06:35:35 UTC], ["updated_at", 2017-05-10 06:35:35 UTC]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 23ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/projects/7" for ::1 at 2017-05-10 01:35:35 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 233ms (Views: 231.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:08:41 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (30.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (130.0ms)
+Completed 200 OK in 1720ms (Views: 1590.3ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 08:29:58 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1026ms (Views: 977.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=M62AWh7RQn6M%2FjeJRSidYXQVislgK9fiG%2BILnSbYPbV%2B8j%2BlCJUr4Gz6V5c2uieiCdhCAcKdUvFO1CAVC%2BR94A%3D%3D&project_type=Social+Media+Postings" for ::1 at 2017-05-10 08:30:02 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"M62AWh7RQn6M/jeJRSidYXQVislgK9fiG+ILnSbYPbV+8j+lCJUr4Gz6V5c2uieiCdhCAcKdUvFO1CAVC+R94A==", "project_type"=>"Social Media Postings"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 215ms (Views: 214.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for ::1 at 2017-05-10 08:31:10 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 757ms (Views: 738.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:34:35 -0500
+  
+SyntaxError (/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+      render("projects/new.html.erb")
+                      ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:51: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+      render("projects/new.html.erb")
+                                    ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:58: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    render("projects/edit.html.erb")
+                    ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:58: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    render("projects/edit.html.erb")
+                                   ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:76: syntax error, unexpected keyword_else):
+  
+app/controllers/projects_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/projects_controller.rb:51: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/projects_controller.rb:58: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/projects_controller.rb:58: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/projects_controller.rb:76: syntax error, unexpected keyword_else
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.1ms)
+Started GET "/" for ::1 at 2017-05-10 08:34:43 -0500
+  
+SyntaxError (/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+      render("projects/new.html.erb")
+                      ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:51: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+      render("projects/new.html.erb")
+                                    ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:58: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    render("projects/edit.html.erb")
+                    ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:58: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    render("projects/edit.html.erb")
+                                   ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:76: syntax error, unexpected keyword_else):
+  
+app/controllers/projects_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/projects_controller.rb:51: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/projects_controller.rb:58: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/projects_controller.rb:58: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/projects_controller.rb:76: syntax error, unexpected keyword_else
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.2ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.3ms)
+Started GET "/projects" for ::1 at 2017-05-10 08:35:37 -0500
+  
+SyntaxError (/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+      render("projects/new.html.erb")
+                      ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:51: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+      render("projects/new.html.erb")
+                                    ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:58: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    render("projects/edit.html.erb")
+                    ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:58: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    render("projects/edit.html.erb")
+                                   ^
+/Users/Nick/Documents/Code/llama/app/controllers/projects_controller.rb:76: syntax error, unexpected keyword_else):
+  
+app/controllers/projects_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/projects_controller.rb:51: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/projects_controller.rb:58: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/projects_controller.rb:58: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/projects_controller.rb:76: syntax error, unexpected keyword_else
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.9ms)
+Started GET "/projects" for ::1 at 2017-05-10 08:36:12 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 237ms (Views: 224.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects" for ::1 at 2017-05-10 08:36:25 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 375ms (Views: 369.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 08:36:34 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 249ms (Views: 241.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=O%2BqDksH9gR3Zx8WrluvIiabYd3Xl0MFuSkcwRDn%2FtA12tTxt17nogznDpbXleXJK2xW%2FvUdmRH0fcRvMFMP0WA%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 08:36:36 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"O+qDksH9gR3Zx8WrluvIiabYd3Xl0MFuSkcwRDn/tA12tTxt17nogznDpbXleXJK2xW/vUdmRH0fcRvMFMP0WA==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 358ms (Views: 355.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-10 08:36:45 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"+Zh5jtSUXq1BNYXXenYE2F0/KEJ2PuArQ+yeefY2hK20x8ZxwtA3M6Ex5ckJ5L4bIPLgitSIZTgW2rXx2wrE+A==", "title"=>"test 2", "project_type"=>"Slide Decks / Presentations", "description"=>"test 2", "status"=>"Not Started", "version"=>"1.0"}
+  [1m[35m (8.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "test 2"], ["project_type", "Slide Decks / Presentations"], ["description", "test 2"], ["status", "Not Started"], ["version", 1.0], ["created_at", 2017-05-10 13:36:45 UTC], ["updated_at", 2017-05-10 13:36:45 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/new/8
+Completed 302 Found in 54ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/items/new/8" for ::1 at 2017-05-10 08:36:45 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"id"=>"8"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 396ms (Views: 377.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:36:55 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (7.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 392ms (Views: 382.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/projects/5" for ::1 at 2017-05-10 08:37:02 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 277ms (Views: 259.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/delete_project/5" for ::1 at 2017-05-10 08:37:04 -0500
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 5]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:37:04 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 278ms (Views: 276.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/6" for ::1 at 2017-05-10 08:37:06 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 256ms (Views: 253.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/delete_project/6" for ::1 at 2017-05-10 08:37:07 -0500
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:37:07 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 265ms (Views: 263.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/7" for ::1 at 2017-05-10 08:37:09 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 238ms (Views: 236.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/delete_project/7" for ::1 at 2017-05-10 08:37:10 -0500
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 7]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:37:10 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 307ms (Views: 305.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/8" for ::1 at 2017-05-10 08:37:12 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 308ms (Views: 307.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 08:37:13 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 391ms (Views: 390.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:49:31 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 1318ms (Views: 1293.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 09:51:39 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 1269ms (Views: 1098.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:52:56 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (5.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (251.1ms)
+Completed 200 OK in 1065ms (Views: 1050.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 09:53:00 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 339ms (Views: 337.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=%2FHb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB%2FmHktCSxKUb%2FKou%2FetbX7zHDcLodLLgQfP6rH%2FDD5yp2TNj0cQ%3D%3D&project_type=Logo+%2F+Branding" for ::1 at 2017-05-10 09:53:05 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"/Hb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB/mHktCSxKUb/Kou/etbX7zHDcLodLLgQfP6rH/DD5yp2TNj0cQ==", "project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 151ms (Views: 149.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=%2FHb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB%2FmHktCSxKUb%2FKou%2FetbX7zHDcLodLLgQfP6rH%2FDD5yp2TNj0cQ%3D%3D&project_type=Logo+%2F+Branding" for ::1 at 2017-05-10 09:53:09 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"/Hb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB/mHktCSxKUb/Kou/etbX7zHDcLodLLgQfP6rH/DD5yp2TNj0cQ==", "project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 215ms (Views: 214.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=%2FHb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB%2FmHktCSxKUb%2FKou%2FetbX7zHDcLodLLgQfP6rH%2FDD5yp2TNj0cQ%3D%3D&project_type=Logo+%2F+Branding" for ::1 at 2017-05-10 09:53:20 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"/Hb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB/mHktCSxKUb/Kou/etbX7zHDcLodLLgQfP6rH/DD5yp2TNj0cQ==", "project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 167ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=%2FHb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB%2FmHktCSxKUb%2FKou%2FetbX7zHDcLodLLgQfP6rH%2FDD5yp2TNj0cQ%3D%3D&project_type=Logo+%2F+Branding" for ::1 at 2017-05-10 09:53:35 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"/Hb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB/mHktCSxKUb/Kou/etbX7zHDcLodLLgQfP6rH/DD5yp2TNj0cQ==", "project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 318ms (Views: 316.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=%2FHb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB%2FmHktCSxKUb%2FKou%2FetbX7zHDcLodLLgQfP6rH%2FDD5yp2TNj0cQ%3D%3D&project_type=Logo+%2F+Branding" for ::1 at 2017-05-10 09:54:06 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"/Hb5ADzP1uQ2048vsOIA3lF12LRcHZrjltEB/mHktCSxKUb/Kou/etbX7zHDcLodLLgQfP6rH/DD5yp2TNj0cQ==", "project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 314ms (Views: 305.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for ::1 at 2017-05-10 09:54:20 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=new):
+  
+app/controllers/items_controller.rb:9:in `show'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.8ms)
+Started GET "/items/new/1" for ::1 at 2017-05-10 09:54:26 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <!-- Validation failure messages -->
+    2: <% if @project.errors.any? %>
+    3:   <% @project.errors.full_messages.each do |message| %>
+    4:     <div class="alert alert-dismissable alert-danger">
+    5:       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  
+app/views/items/new.html.erb:2:in `_app_views_items_new_html_erb___1621587934177750061_70118755064500'
+app/controllers/items_controller.rb:17:in `new'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.3ms)
+Started GET "/items/new" for ::1 at 2017-05-10 09:54:33 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=new):
+  
+app/controllers/items_controller.rb:9:in `show'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.9ms)
+Started GET "/" for ::1 at 2017-05-10 09:54:41 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 213ms (Views: 211.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:54:43 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 206ms (Views: 205.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:55:46 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 351ms (Views: 341.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:56:19 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 273ms (Views: 272.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:56:35 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 161ms (Views: 160.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 09:57:17 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 356ms (Views: 347.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 11:28:06 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 1074ms (Views: 1064.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-10 11:28:12 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 302ms (Views: 298.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?authenticity_token=jNVT6FQXF9P6L%2FfsG3EKOs1WTsLZW22Yvi7wBwHLSpDBiuwXQlN%2BTRorl%2FJo47D5sJuGCnvt6IvrGNuPLPcKxQ%3D%3D&project_type=Slide+Decks+%2F+Presentations" for ::1 at 2017-05-10 11:28:22 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"authenticity_token"=>"jNVT6FQXF9P6L/fsG3EKOs1WTsLZW22Yvi7wBwHLSpDBiuwXQlN+TRorl/Jo47D5sJuGCnvt6IvrGNuPLPcKxQ==", "project_type"=>"Slide Decks / Presentations"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 296ms (Views: 293.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-10 11:28:25 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"P0O0SUF0toVEpl3Q4kaDoF9pHt/N9kfg/a5obgF0Hc1yHAu2VzDfG6SiPc6R1DljIqTWF29AwvOomEPmLEhdmA==", "title"=>"", "project_type"=>"Slide Decks / Presentations", "description"=>"", "status"=>"Not Started", "version"=>"1.0"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["project_type", "Slide Decks / Presentations"], ["description", ""], ["status", "Not Started"], ["version", 1.0], ["created_at", 2017-05-10 16:28:25 UTC], ["updated_at", 2017-05-10 16:28:25 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/new/9
+Completed 302 Found in 46ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/items/new/9" for ::1 at 2017-05-10 11:28:26 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"id"=>"9"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <!-- Validation failure messages -->
+    2: <% if @project.errors.any? %>
+    3:   <% @project.errors.full_messages.each do |message| %>
+    4:     <div class="alert alert-dismissable alert-danger">
+    5:       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  
+app/views/items/new.html.erb:2:in `_app_views_items_new_html_erb___1621587934177750061_70118775900060'
+app/controllers/items_controller.rb:17:in `new'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.5ms)
+Started GET "/items/new/9" for ::1 at 2017-05-10 11:33:03 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"id"=>"9"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (69.4ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <!-- Validation failure messages -->
+    2: <% if @project.errors.any? %>
+    3:   <% @project.errors.full_messages.each do |message| %>
+    4:     <div class="alert alert-dismissable alert-danger">
+    5:       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  
+app/views/items/new.html.erb:2:in `_app_views_items_new_html_erb___1621587934177750061_70118775785540'
+app/controllers/items_controller.rb:17:in `new'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.9ms)
+Started GET "/items/new/9" for ::1 at 2017-05-10 11:34:21 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"id"=>"9"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 803ms (Views: 789.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 11:47:29 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 441ms (Views: 425.2ms | ActiveRecord: 4.4ms)
+
+

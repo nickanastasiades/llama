@@ -7,33 +7,84 @@
     </div>
   <% end %>
 <% end %>
-
+<form action="/projects/new">
 <div class="row">
   <div class="col-md-9 light-body">
+    <div class="row">
+      <div class="col-md-2 progresss mobile-only">
+        <img src="/images/progress-1.png" width="100"/>
+      </div>
+    <div class="col-md-10">
     <h1 class="page-title">How Can We Help?</h1>
-    <form action="/projects/new">
+  </div>
+  <div class="col-md-2 progresss desktop-only">
+    <img src="/images/progress-1.png" width="100"/>
+  </div>
+</div>
+
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <label class="project_type_box">
-    <input type="radio" name="project_type" value="Logo" />
-    <div class="project_type_select"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>Website</div>
-  </label>
 
   <label class="project_type_box">
-<input type="radio" name="project_type" value="Logo" />
-<div class="project_type_select"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>Website</div>
+<input type="radio" name="project_type" value="Website Update" required=""/>
+<div class="project_type_select">Website Update</div>
 </label>
 
 <label class="project_type_box">
-<input type="radio" name="project_type" value="Logo" />
-<div class="project_type_select"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>Website</div>
+<input type="radio" name="project_type" value="Logo / Branding"/>
+<div class="project_type_select">Logo / Branding</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Slide Decks / Presentations"/>
+<div class="project_type_select">Slide Decks / Presentations</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Social Media Postings"/>
+<div class="project_type_select">Social Media Postings</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Digital Advertising"/>
+<div class="project_type_select">Digital Advertising</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Flyers, Cards or Brochures"/>
+<div class="project_type_select">Flyers, Cards or Brochures</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Graphics / Icons"/>
+<div class="project_type_select">Graphics / Icons</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Search Engine Optimization"/>
+<div class="project_type_select">Search Engine Optimization</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="UI / UX"/>
+<div class="project_type_select">UI /<br>UX</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Email Marketing"/>
+<div class="project_type_select">Email Marketing</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Something Else"/>
+<div class="project_type_select">Something<br>Else</div>
 </label>
 
   </div>
   <div class="col-md-3 dark-body scrollify no-padding text-center">
-    <button class="big-next"><h2 class="hello"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>
-      Create Project</h2></button>
+    <button class="big-next"><h2 class="next-btn"><img src="/images/next-arrow.png" style="width: 70px;"><br>
+      Next Up</h2><h4 class="next-sub-btn">Describe Project</h4></button>
     </div>
 
 </div>

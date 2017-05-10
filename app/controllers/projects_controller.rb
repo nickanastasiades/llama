@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
     save_status = @project.save
 
     if save_status == true
-      redirect_to("/projects/#{@project.id}", :notice => "Project created successfully.")
+      redirect_to("/items/new/#{@project.id}", :notice => "")
     else
       render("projects/new.html.erb")
     end

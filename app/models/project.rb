@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
-  # disable STI
-  inheritance_column = :_type_disabled
+  validates :title, presence: true
+  validates :project_type, presence: true
+  validates :description, presence: true
+  validates :status, presence: true
+  validates :version, presence: true
 end

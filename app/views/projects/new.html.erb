@@ -7,85 +7,68 @@
     </div>
   <% end %>
 <% end %>
-
+<form action="/create_project" method="post">
 <div class="row">
   <div class="col-md-9 light-body">
-    <h1 class="page-title">How Can We Help?</h1>
-    <form action="/create_project" method="post">
+    <div class="row">
+      <div class="col-md-2 progresss mobile-only">
+        <img src="/images/progress-2.png" width="100"/>
+      </div>
+    <div class="col-md-10">
+    <h1 class="page-title">Project Details</h1>
+  </div>
+  <div class="col-md-2 progresss desktop-only">
+    <img src="/images/progress-2.png" width="100"/>
+  </div>
+</div>
+
       <!-- Hidden input for authenticity token to protect from forgery -->
+
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
       <!-- Label and input for title -->
       <div class="form-group">
         <label for="title" class="control-label">
-          Title
+          Project Name
         </label>
 
-        <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @project.title %>">
+        <input type="text" id="title" name="title" placeholder="What do you want to call the project?" class="form-control" value="<%= @project.title %>">
       </div>
 
       <!-- Label and input for type -->
       <div class="form-group">
-        <label for="project_type" class="control-label">
-          Type
-        </label>
 
-        <input type="text" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @type %>">
+        <input type="hidden" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @type %>">
       </div>
 
       <!-- Label and input for description -->
       <div class="form-group">
-        <label for="description" class="control-label">
-          Description
+        <br><label for="description" class="control-label">
+          Describe Your Project
         </label>
 
-        <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @project.description %>">
+        <textarea rows="6" id="description" name="description" placeholder="The more info you include here the more accurate our design will be." class="form-control" value="<%= @project.description %>"></textarea>
       </div>
 
       <!-- Label and input for status -->
       <div class="form-group">
-        <label for="status" class="control-label">
-          Status
-        </label>
 
-        <input type="text" id="status" name="status" placeholder="Status" class="form-control" value="<%= @project.status %>">
+        <input type="hidden" id="status" name="status" placeholder="Status" class="form-control" value="Not Started">
       </div>
 
       <!-- Label and input for version -->
       <div class="form-group">
-        <label for="version" class="control-label">
-          Version
-        </label>
 
-        <input type="text" id="version" name="version" placeholder="Version" class="form-control" value="<%= @project.version %>">
+        <input type="hidden" id="version" name="version" placeholder="Version" class="form-control" value="1.0">
       </div>
 
-      <!-- Label and input for designer_id -->
-      <div class="form-group">
-        <label for="designer_id" class="control-label">
-          Designer
-        </label>
 
-        <input type="text" id="designer_id" name="designer_id" placeholder="Designer" class="form-control" value="<%= @project.designer_id %>">
-      </div>
-
-      <!-- Label and input for hours_used -->
-      <div class="form-group">
-        <label for="hours_used" class="control-label">
-          Hours used
-        </label>
-
-        <input type="text" id="hours_used" name="hours_used" placeholder="Hours used" class="form-control" value="<%= @project.hours_used %>">
-      </div>
-
-      <button class="btn btn-success">
-        Create Project
-      </button>
-      or
-      <a href="/projects">Cancel</a>
-    </form>
+<img src="/images/bring-it.png" style="width: 100%;max-width:500px; margin-top: 40px; margin-bottom:-20px;"/>
   </div>
-  <div class="col-md-3 dark-body scrollify">
-    <h2 class="hello">Button</h2>
-  </div>
+  <div class="col-md-3 dark-body scrollify no-padding text-center">
+    <button class="big-next"><h2 class="next-btn"><img src="/images/next-arrow.png" style="width: 70px;"><br>
+      Next Up</h2><h4 class="next-sub-btn">Upload Files</h4></button>
+    </div>
+
 </div>
+</form>
