@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
     @project = Project.new
 
     @project.title = params[:title]
-    @project.type = params[:type]
+    @project.project_type = params[:project_type]
     @project.description = params[:description]
     @project.status = params[:status]
     @project.version = params[:version]
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     @project.title = params[:title]
-    @project.type = params[:type]
+    @project.project_type = params[:project_type]
     @project.description = params[:description]
     @project.status = params[:status]
     @project.version = params[:version]

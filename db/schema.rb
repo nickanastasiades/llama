@@ -55,14 +55,6 @@ ActiveRecord::Schema.define(version: 20170509235452) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "files", force: :cascade do |t|
-    t.integer  "project_id"
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "name"
@@ -73,14 +65,14 @@ ActiveRecord::Schema.define(version: 20170509235452) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
-    t.string   "type"
+    t.string   "project_type"
     t.string   "description"
     t.string   "status"
     t.float    "version"
     t.integer  "designer_id"
     t.float    "hours_used"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
