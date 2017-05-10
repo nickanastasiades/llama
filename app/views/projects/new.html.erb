@@ -8,12 +8,9 @@
   <% end %>
 <% end %>
 
-<div class="page-header">
-  <h3>Add Project</h3>
-</div>
-
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-9 light-body">
+    <h1 class="page-title">How Can We Help?</h1>
     <form action="/create_project" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
@@ -33,7 +30,7 @@
           Type
         </label>
 
-        <input type="text" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @project.project_type %>">
+        <input type="text" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @type %>">
       </div>
 
       <!-- Label and input for description -->
@@ -87,5 +84,8 @@
       or
       <a href="/projects">Cancel</a>
     </form>
+  </div>
+  <div class="col-md-3 dark-body scrollify">
+    <h2 class="hello">Button</h2>
   </div>
 </div>
