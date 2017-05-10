@@ -1,0 +1,22 @@
+@media screen and (max-width: 991px) {
+    .scrollify {margin-top: 0px !important;}
+}
+
+.project_type_box {
+  text-align: center;
+}
+
+.project_type_box > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.project_type_box > input + div{ /* IMAGE STYLES */
+  padding: 30px;
+  cursor:pointer;
+  border:1px solid #c3c6d1;
+  border-radius: 5px;
+}
+.project_type_box > input:checked + div{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #33414d;
+  border-radius: 5px;
+}

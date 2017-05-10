@@ -1,0 +1,40 @@
+<!-- Validation failure messages -->
+<% if @project.errors.any? %>
+  <% @project.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="row">
+  <div class="col-md-9 light-body">
+    <h1 class="page-title">How Can We Help?</h1>
+    <form action="/projects/new">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <label class="project_type_box">
+    <input type="radio" name="project_type" value="Logo" />
+    <div class="project_type_select"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>Website</div>
+  </label>
+
+  <label class="project_type_box">
+<input type="radio" name="project_type" value="Logo" />
+<div class="project_type_select"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>Website</div>
+</label>
+
+<label class="project_type_box">
+<input type="radio" name="project_type" value="Logo" />
+<div class="project_type_select"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>Website</div>
+</label>
+
+  </div>
+  <div class="col-md-3 dark-body scrollify no-padding text-center">
+    <button class="big-next"><h2 class="hello"><img src="http://placehold.it/20x20/35d/fff&text=f"><br>
+      Create Project</h2></button>
+    </div>
+
+</div>
+</form>

@@ -21,8 +21,15 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @type = params[:project_type]
 
     render("projects/new.html.erb")
+  end
+
+  def start
+    @project = Project.new
+
+    render("projects/start.html.erb")
   end
 
   def create

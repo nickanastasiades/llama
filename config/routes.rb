@@ -73,6 +73,7 @@ Rails.application.routes.draw do
 
   # Routes for the Project resource:
   # CREATE
+  get "/projects/start", :controller => "projects", :action => "start"
   get "/projects/new", :controller => "projects", :action => "new"
   post "/create_project", :controller => "projects", :action => "create"
 

@@ -16,6 +16,8 @@
 body {background: #f7f7f7;}
 a {text-decoration: none !important;}
 body {font-size: 15px;}
+.no-padding {padding: 0px !important;}
+.text-center {text-align: center !important;}
 .footer-row {text-align: center; margin-top: 40px;}
 .copyright {text-align: center; color: #6a737c; font-size: 12px; margin-top: 8px; margin-bottom: 50px;}
 .footer-menu {text-transform: uppercase; font-weight: 600; font-size: 12px; margin: 5px; color: #6a737c !important;}
@@ -37,4 +39,6 @@ body {font-size: 15px;}
 .table-name {font-size: 22px; font-weight: 300}
 .projects-table > tbody > tr > td {vertical-align: middle; border-bottom: 1px solid #dfdfe1; height: 65px;}
 .projects-table > tbody > tr > td a {display:block; width:100%;}
+.big-next {border-radius: 0px; background: none; height: 100%; width: 100%;}
+.big-next:hover {background-color: #3b4a57 !important; background-image: none !important;}
 }
