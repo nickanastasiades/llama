@@ -52,4 +52,12 @@ label {margin-bottom: 5px; font-weight: 600;}
 .upload-table {width: 90%;}
 .upload-table > tbody > tr > td {vertical-align: middle;}
 .upload-table > tbody > tr > td:last-child {text-align: right;}
+.big-status {font-size: 20px;}
+.status-cell {margin-bottom: 40px; margin-top: 15px; text-align: right;}
+.project-details {font-size: 16px;}
+.side-menu {margin-top: 50px;}
+.sidelink {font-size: 18px; font-weight: 600; color: #33414d !important; cursor: pointer; padding: 10px 5px; text-align: left;}
+.sidelink:hover {color: #16d4d4 !important; cursor: pointer;}
+.sideitem {padding: 20px 0px; border-bottom: 1px solid #ededed}
+.fa {margin-right: 8px;}
 }

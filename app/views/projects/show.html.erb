@@ -1,43 +1,63 @@
-<div class="page-header">
-  <h3>Project #<%= @project.id %></h3>
-</div>
-
 <div class="row">
-  <div class="col-md-12 mb-2">
-    <dl class="dl-horizontal">
-      <dt>Title</dt>
-      <dd><%= @project.title %></dd>
+  <div class="col-md-9 light-body">
 
-      <dt>Type</dt>
-      <dd><%= @project.project_type %></dd>
+    <div class="row">
+    <div class="col-md-9">
+    <h1 class="page-title"><%= @project.title %></h1>
+    </div>
+    <div class="col-md-3 status-cell">
 
-      <dt>Description</dt>
-      <dd><%= @project.description %></dd>
-
-      <dt>Status</dt>
-      <dd><%= @project.status %></dd>
-
-      <dt>Version</dt>
-      <dd><%= @project.version %></dd>
-
-      <dt>Designer</dt>
-      <dd><%= @project.designer_id %></dd>
-
-      <dt>Hours used</dt>
-      <dd><%= @project.hours_used %></dd>
-
-    </dl>
-
-    <div class="btn-group btn-group-justified">
-      <a href="/projects" class="btn btn-primary">
-        Back
-      </a>
-      <a href="/projects/<%= @project.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_project/<%= @project.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
+    <% if @project.status == "Completed" %>
+    <% status_label = "success" %>
+    <% elsif @project.status == "In Progress" %>
+    <% status_label = "warning" %>
+    <% else %>
+    <% status_label = "default" %>
+    <% end %>
+    <span class="label big-status label-<%= status_label %>"><%= @project.status %></span>
     </div>
   </div>
+
+    <dl class="dl-horizontal project-details">
+    <dt>Type</dt>
+    <dd><%= @project.project_type %></dd>
+
+    <dt>Description</dt>
+    <dd><%= @project.description %></dd>
+
+    <dt>Version</dt>
+    <dd><%= @project.version %></dd>
+
+    <dt>Designer</dt>
+    <dd><%= @project.designer_id %></dd>
+
+    <dt>Hours Used</dt>
+    <dd><%= @project.hours_used %></dd>
+    </dl>
+
+<br/>
+    <h1 class="page-title">Project Files</h1>
+
+    <table class="table table-striped table-hover upload-table" style="margin-top: 5px;">
+
+    <% @project.items.each do |item| %>
+    <tr>
+    <td><%= item.name %></td>
+    <td><%= item.description %></td>
+    <td><a href="<%= item.url %>" download><img src="/images/download-icon.png" class="x-icon"/></a>
+      <a href="/delete_item/<%= item.id %>"><img src="/images/x-icon.png" class="x-icon"/></a></td>
+    </tr>
+    <% end %>
+    </table>
+
+
+    </div>
+
+
+
+  <div class="col-md-3 side-menu scrollify no-padding text-center">
+    <div class="sideitem"><a class="sidelink" href="/dashboard"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Dashboard</a></div>
+    <div class="sideitem"><a class="sidelink" href="/projects/<%= @project.id %>/edit/"><i class="fa fa-undo" aria-hidden="true"></i> Request Revision</a></div>
+    <div class="sideitem"><a class="sidelink" href="/delete_project/<%= @project.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete Project</a></div>
+    </div>
 </div>
