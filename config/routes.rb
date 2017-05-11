@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/items/new/:project_id", :controller => "items", :action => "new"
   get "/items/add/:project_id", :controller => "items", :action => "add"
   post "/create_item", :controller => "items", :action => "create"
+  post "/revise_item", :controller => "items", :action => "revise_item"
 
   # READ
   get "/items", :controller => "items", :action => "index"
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
 
   # UPDATE
   get "/items/:id/edit", :controller => "items", :action => "edit"
+  get "/items/revise/:project_id", :controller => "items", :action => "revise"
   post "/update_item/:project_id", :controller => "items", :action => "update"
 
   # DELETE
@@ -62,6 +64,8 @@ Rails.application.routes.draw do
   get "/projects/start", :controller => "projects", :action => "start"
   get "/projects/new", :controller => "projects", :action => "new"
   post "/create_project", :controller => "projects", :action => "create"
+  get "/projects/review/:id", :controller => "projects", :action => "review"
+  get "/projects/revise-submit/:id", :controller => "projects", :action => "revise_submit"
 
   # READ
   get "/projects", :controller => "projects", :action => "index"

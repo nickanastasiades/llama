@@ -1,5 +1,5 @@
 @media screen and (max-width: 991px) {
-    .scrollify {margin-top: 0px !important;}
+    .scrollify {margin-top: 20px !important;}
     .mobile-only {display: block!important;}
     .desktop-only {display: none!important;}
 }
@@ -8,33 +8,29 @@
     .desktop-only {display: block !important;}
 }
 
-.project_type_box {
-  text-align: center;
-  padding: 5px;
+.project_type_select {
+  border: 1px solid #d0d8df;
+display: inline-block;
+text-align: center;
+border-radius: 7px;
+font-size: 18px;
+margin: 8px;
+color: #8596a7 !important;
+height: 150px;
+width: 150px;
+padding: 32px 5px;
+line-height: 25px;
+cursor: pointer;
 }
 
-.project_type_box > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
+.project_type_select:hover {
+  border: 1px solid #33414d;
+color: #33414d !important;
+cursor: pointer;
 }
-.project_type_box > input + div{ /* IMAGE STYLES */
-  padding: 50px 12px;
-    cursor: pointer;
-    border: 1px solid #c3c6d1;
-    border-radius: 5px;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    font-size: 17px;
-    line-height: 23px;
-    font-weight: 500;
-    color: #8596a7;
-}
-.project_type_box > input:checked + div{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid #33414d;
-  border-radius: 5px;
-  color: #33414d;
-}
+
+.project_type_select > i {margin-bottom: 10px; margin-right: 0}
+
 
 .progresss {
   text-align: center;
@@ -46,4 +42,9 @@ input[type="file"] {
   padding: 75px 10px;
   background: url(/images/upload-cloud.png) right center no-repeat;
   background-size: 220px;
+}
+
+.announcement {
+  font-size: 36px;
+  font-weight: 300;
 }

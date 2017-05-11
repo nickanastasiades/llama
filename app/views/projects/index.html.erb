@@ -16,6 +16,8 @@
   <%       status_label = "success" %>
   <%     elsif project.status == "In Progress" %>
   <%       status_label = "warning" %>
+  <%     elsif project.status == "In Revision" %>
+  <%       status_label = "warning" %>
 <%       else %>
 <%         status_label = "default" %>
 <%       end %>
