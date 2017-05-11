@@ -48,3 +48,11 @@ input[type="file"] {
   font-size: 36px;
   font-weight: 300;
 }
+
+.project-img {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 1000px;
+  background-size: cover !important;
+}

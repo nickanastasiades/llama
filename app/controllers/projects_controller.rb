@@ -16,6 +16,14 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
 
+    if @project.items.where('url LIKE ? OR url LIKE ?', "%jpg%", "%png%").count > 0
+      @project_img = @project.items.where('url LIKE ? OR url LIKE ?', "%jpg%", "%png%").last.url
+    else
+      @project_img = "/images/llama-project-icon.png"
+    end
+
+
+
     render("projects/show.html.erb")
   end
 
