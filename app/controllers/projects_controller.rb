@@ -19,6 +19,12 @@ class ProjectsController < ApplicationController
     render("projects/show.html.erb")
   end
 
+  def review
+    @project = Project.find(params[:id])
+
+    render("projects/review.html.erb")
+  end
+
   def new
     @project = Project.new
     @type = params[:project_type]
@@ -47,6 +53,8 @@ class ProjectsController < ApplicationController
 
     if save_status == true
       redirect_to("/items/new/#{@project.id}", :notice => "")
+    elsif save_status == false && @project.project_type.empty?
+      render("projects/start.html.erb")
     else
       render("projects/new.html.erb")
     end

@@ -17,9 +17,6 @@
     <div class="col-md-10">
     <h1 class="page-title">Project Details</h1>
   </div>
-  <div class="col-md-2 progresss desktop-only">
-    <img src="/images/progress-2.png" width="100"/>
-  </div>
 </div>
 
       <!-- Hidden input for authenticity token to protect from forgery -->
@@ -38,7 +35,7 @@
       <!-- Label and input for type -->
       <div class="form-group">
 
-        <input type="text" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @type %>">
+        <input type="hidden" id="project_type" name="project_type" placeholder="Project Type" class="form-control" value="<%= @type %>">
       </div>
 
       <!-- Label and input for description -->
@@ -62,12 +59,17 @@
         <input type="hidden" id="version" name="version" placeholder="Version" class="form-control" value="1.0">
       </div>
 
+      <p style="text-align:left; margin-top: 30px;"><button type="submit" class="blue-btn-lg">Next</button></p>
 
-<img src="/images/bring-it.png" style="width: 100%;max-width:500px; margin-top: 40px; margin-bottom:-20px;"/>
+
+
+<img src="/images/bring-it.png" style="width: 100%;max-width:500px; margin-top: 10px; margin-bottom:-20px;"/>
   </div>
-  <div class="col-md-3 dark-body scrollify no-padding text-center">
-    <button class="big-next"><h2 class="next-btn"><img src="/images/next-arrow.png" style="width: 70px;"><br>
-      Next Up</h2><h4 class="next-sub-btn">Upload Files</h4></button>
+  <div class="col-md-3 side-menu scrollify no-padding text-left">
+    <div class="side-progress"><a class="sidelink active" href="/projects/start"><i class="fa fa-check-circle" aria-hidden="true"></i> Project Type</a></div>
+    <div class="side-progress"><span class="sidelink active"><i class="fa fa-circle" aria-hidden="true"></i> Project Details</span></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Upload Files</span></div>
+    <div class="side-progress"><span class="sidelink inactive disabled"><i class="fa fa-circle-thin" aria-hidden="true"></i> Review Project</span></div>
     </div>
 
 </div>

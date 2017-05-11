@@ -61,7 +61,8 @@ Rails.application.routes.draw do
   # CREATE
   get "/projects/start", :controller => "projects", :action => "start"
   get "/projects/new", :controller => "projects", :action => "new"
-  post "/create_project", :controller => "projects", :action => "create"
+  get "/create_project", :controller => "projects", :action => "create"
+  get "/projects/review/:id", :controller => "projects", :action => "review"
 
   # READ
   get "/projects", :controller => "projects", :action => "index"
