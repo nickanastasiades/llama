@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.integer :project_id
       t.string :name
       t.string :description
+      t.string :url
 
       t.timestamps
 

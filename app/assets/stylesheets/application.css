@@ -34,8 +34,8 @@ body {font-size: 15px;}
 .light-body {background-color: #fff; padding: 30px 4% 60px 4%; min-height: 500px; box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);}
 .hello {color: #fff; font-weight: 600; font-size: 40px; margin-bottom: 12px; margin-top: 30px;}
 .intro {color: #fff; font-weight: 300; font-size: 40px; margin-bottom: 12px; margin-bottom: 40px; line-height: 50px;}
-.blue-btn-lg {background-color: #16d4d4; color: #33414d !important; border-radius: 100px; padding: 16px 32px; text-transform: uppercase; font-size: 16px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 50px;}
-.blue-btn-lg:hover, .blue-btn-lg:focus, .blue-btn-lg:active {background-color: #1bdcdc; color: #33414d !important;}
+.blue-btn-lg {background-color: #16d4d4 !important; color: #33414d !important; border-radius: 100px; padding: 16px 32px; text-transform: uppercase; font-size: 16px; font-weight: 600; letter-spacing: 0.6px; margin-bottom: 50px; background: none; box-shadow: none; border: none; text-shadow: none;}
+.blue-btn-lg:hover, .blue-btn-lg:focus, .blue-btn-lg:active {background-color: #1bdcdc !important; color: #33414d !important; background-image: none !important;}
 .page-title {font-weight: 600;color: #33414d;margin-top: 16px; font-size: 36px; margin-bottom: 30px; width: 100%}
 .table-name {font-size: 22px; font-weight: 300}
 .projects-table > tbody > tr > td {vertical-align: middle; border-bottom: 1px solid #dfdfe1; height: 65px;}
@@ -48,4 +48,16 @@ form input[type=text], form input[type=password], form input[type=email], form i
 form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=number]:focus, form input[type=url]:focus, form input[type=tel]:focus, form input[type=date]:focus, form input[type=time]:focus, form textarea:focus {box-shadow: none; border: 2px solid #2c3e50;}
 .form-control {width: 90%}
 label {margin-bottom: 5px; font-weight: 600;}
+.x-icon {width: 16px; margin: 8px 14px 6px 6px; text-align: right;}
+.upload-table {width: 90%;}
+.upload-table > tbody > tr > td {vertical-align: middle;}
+.upload-table > tbody > tr > td:last-child {text-align: right;}
+.big-status {font-size: 20px;}
+.status-cell {margin-bottom: 40px; margin-top: 15px; text-align: right;}
+.project-details {font-size: 16px;}
+.side-menu {margin-top: 50px;}
+.sidelink {font-size: 18px; font-weight: 600; color: #33414d !important; cursor: pointer; padding: 10px 5px; text-align: left;}
+.sidelink:hover {color: #16d4d4 !important; cursor: pointer;}
+.sideitem {padding: 20px 0px; border-bottom: 1px solid #ededed}
+.fa {margin-right: 8px;}
 }

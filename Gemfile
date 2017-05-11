@@ -57,4 +57,4 @@ gem 'activeadmin'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # add paperclip
-gem "paperclip", "~> 4.1"
+gem "carrierwave"

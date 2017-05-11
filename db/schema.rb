@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170509235452) do
 
-
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
     t.text     "body"
@@ -60,6 +59,7 @@ ActiveRecord::Schema.define(version: 20170509235452) do
     t.integer  "project_id"
     t.string   "name"
     t.string   "description"
+    t.string   "url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

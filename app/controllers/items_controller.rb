@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @item.project_id = params[:project_id]
 
     render("items/new.html.erb")
   end
@@ -21,16 +22,25 @@ class ItemsController < ApplicationController
     @item = Item.new
 
     @item.project_id = params[:project_id]
-    @item.name = params[:name]
+    @item.name = params[:url].original_filename
     @item.description = params[:description]
+    @item.url = params[:url]
 
     save_status = @item.save
 
     if save_status == true
-      redirect_to("/items/#{@item.id}", :notice => "Item created successfully.")
+      redirect_to("/items/add/#{@item.project_id}", :notice => "")
     else
       render("items/new.html.erb")
     end
+  end
+
+  def add
+    @item = Item.new
+    @item.project_id = params[:project_id]
+    @project = Project.find(params[:project_id])
+
+    render("items/add.html.erb")
   end
 
   def edit
@@ -63,7 +73,7 @@ class ItemsController < ApplicationController
     if URI(request.referer).path == "/items/#{@item.id}"
       redirect_to("/", :notice => "Item deleted.")
     else
-      redirect_to(:back, :notice => "Item deleted.")
+      redirect_to(:back, :notice => "")
     end
   end
 end

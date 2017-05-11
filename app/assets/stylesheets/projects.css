@@ -40,3 +40,10 @@
   text-align: center;
   margin: 15px 0px;
 }
+
+input[type="file"] {
+  height: 180px;
+  padding: 75px 10px;
+  background: url(/images/upload-cloud.png) right center no-repeat;
+  background-size: 220px;
+}
