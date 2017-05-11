@@ -25,6 +25,12 @@ class ProjectsController < ApplicationController
     render("projects/review.html.erb")
   end
 
+  def revise_submit
+    @project = Project.find(params[:id])
+
+    render("projects/revise-submit.html.erb")
+  end
+
   def new
     @project = Project.new
     @type = params[:project_type]
@@ -80,7 +86,7 @@ class ProjectsController < ApplicationController
     save_status = @project.save
 
     if save_status == true
-      redirect_to("/projects/#{@project.id}", :notice => "Project updated successfully.")
+      redirect_to("/items/revise/#{@project.id}", :notice => "")
     else
       render("projects/edit.html.erb")
     end

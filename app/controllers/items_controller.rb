@@ -35,12 +35,37 @@ class ItemsController < ApplicationController
     end
   end
 
+  def revise_item
+    @item = Item.new
+
+    @item.project_id = params[:project_id]
+    @item.name = params[:url].original_filename
+    @item.description = params[:description]
+    @item.url = params[:url]
+
+    save_status = @item.save
+
+    if save_status == true
+      redirect_to("/items/revise/#{@item.project_id}", :notice => "")
+    else
+      render("items/new.html.erb")
+    end
+  end
+
   def add
     @item = Item.new
     @item.project_id = params[:project_id]
     @project = Project.find(params[:project_id])
 
     render("items/add.html.erb")
+  end
+
+  def revise
+    @item = Item.new
+    @item.project_id = params[:project_id]
+    @project = Project.find(params[:project_id])
+
+    render("items/revise.html.erb")
   end
 
   def edit

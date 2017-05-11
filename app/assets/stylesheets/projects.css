@@ -43,3 +43,8 @@ input[type="file"] {
   background: url(/images/upload-cloud.png) right center no-repeat;
   background-size: 220px;
 }
+
+.announcement {
+  font-size: 36px;
+  font-weight: 300;
+}
