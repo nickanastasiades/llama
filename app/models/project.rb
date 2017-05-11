@@ -4,4 +4,6 @@ class Project < ApplicationRecord
   validates :description, presence: true
   validates :status, presence: true
   validates :version, presence: true
+
+  has_many :items, :class_name => "Item", :foreign_key => "project_id"
 end

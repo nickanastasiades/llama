@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Routes for the Item resource:
   # CREATE
   get "/items/new/:project_id", :controller => "items", :action => "new"
+  get "/items/add/:project_id", :controller => "items", :action => "add"
   post "/create_item", :controller => "items", :action => "create"
 
   # READ
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get "/delete_item/:id", :controller => "items", :action => "destroy"
+
+
   #------------------------------
 
   # Routes for the Designer resource:
