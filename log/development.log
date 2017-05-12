@@ -16366,3 +16366,94 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 305ms (Views: 295.7ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for ::1 at 2017-05-11 19:06:17 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 950ms (Views: 857.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/17" for ::1 at 2017-05-11 19:31:37 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProject Load (4.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE "items"."project_id" = ? AND (url LIKE '%jpg%' OR url LIKE '%png%')[0m  [["project_id", 17]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."project_id" = ? AND (url LIKE '%jpg%' OR url LIKE '%png%') ORDER BY "items"."id" DESC LIMIT ?[0m  [["project_id", 17], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."project_id" = ?[0m  [["project_id", 17]]
+  Rendered projects/show.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 1099ms (Views: 945.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-11 19:31:40 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 400ms (Views: 399.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/start/" for ::1 at 2017-05-11 19:31:41 -0500
+Processing by ProjectsController#start as HTML
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 323ms (Views: 321.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new?project_type=Logo+%2F+Branding" for ::1 at 2017-05-11 19:32:03 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"project_type"=>"Logo / Branding"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 316ms (Views: 315.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-11 19:32:14 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"cbvMn9YOCoOisQMCbH4U9TEOvu0Bf/CqY6swei4UnH485HNgwEpjHUK1Yxwf7K42TMN2JaPJdbk2nRvyAyjcKw==", "title"=>"", "project_type"=>"Logo / Branding", "description"=>"", "status"=>"Not Started", "version"=>"1.0", "hours_used"=>"0"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 214ms (Views: 185.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-11 19:32:35 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"t7Iu3XrMqGeRnSTxwPLq0GN03/gokXvxr4NagziNxY767ZEibIjB+XGZRO+zYFATHrkXMIon/uL6tXELFbGF2w==", "title"=>"www", "project_type"=>"", "description"=>"www", "status"=>"Not Started", "version"=>"1.0", "hours_used"=>"0"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering projects/start.html.erb within layouts/application
+  Rendered projects/start.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 188ms (Views: 181.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new?project_type=Graphics+%2F+Icons" for ::1 at 2017-05-11 19:32:41 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"project_type"=>"Graphics / Icons"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 272ms (Views: 267.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-11 19:32:44 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"f3zwIJTJ3tL1H3KxdtHahrXpktAFJ3erxZ2fWX6OP/4yI0/fgo23TBUbEq8FQ2BFyCRaGKeR8riQq7TRU7J/qw==", "title"=>"eee", "project_type"=>"Graphics / Icons", "description"=>"ee", "status"=>"Not Started", "version"=>"1.0", "hours_used"=>"0"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "hours_used", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "eee"], ["project_type", "Graphics / Icons"], ["description", "ee"], ["status", "Not Started"], ["version", 1.0], ["hours_used", 0.0], ["created_at", 2017-05-12 00:32:44 UTC], ["updated_at", 2017-05-12 00:32:44 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/new/18
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/items/new/18" for ::1 at 2017-05-11 19:32:44 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"project_id"=>"18"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 190ms (Views: 187.4ms | ActiveRecord: 0.0ms)
+
+
