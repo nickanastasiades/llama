@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
   get "/", :controller => "projects", :action => "index"
   get "/dashboard", :controller => "projects", :action => "index"
 
