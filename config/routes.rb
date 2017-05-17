@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  root to: "index" 
+
   get "/", :controller => "projects", :action => "index"
   get "/dashboard", :controller => "projects", :action => "index"
 
