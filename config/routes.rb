@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get "/", :controller => "projects", :action => "index"
   get "/dashboard", :controller => "projects", :action => "index"
 
