@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :clients
   get "/", :controller => "projects", :action => "index"
   get "/dashboard", :controller => "projects", :action => "index"
 
@@ -25,40 +26,6 @@ Rails.application.routes.draw do
 
   #------------------------------
 
-  # Routes for the Designer resource:
-  # CREATE
-  get "/designers/new", :controller => "designers", :action => "new"
-  post "/create_designer", :controller => "designers", :action => "create"
-
-  # READ
-  get "/designers", :controller => "designers", :action => "index"
-  get "/designers/:id", :controller => "designers", :action => "show"
-
-  # UPDATE
-  get "/designers/:id/edit", :controller => "designers", :action => "edit"
-  post "/update_designer/:id", :controller => "designers", :action => "update"
-
-  # DELETE
-  get "/delete_designer/:id", :controller => "designers", :action => "destroy"
-  #------------------------------
-
-  # Routes for the Company resource:
-  # CREATE
-  get "/companies/new", :controller => "companies", :action => "new"
-  post "/create_company", :controller => "companies", :action => "create"
-
-  # READ
-  get "/companies", :controller => "companies", :action => "index"
-  get "/companies/:id", :controller => "companies", :action => "show"
-
-  # UPDATE
-  get "/companies/:id/edit", :controller => "companies", :action => "edit"
-  post "/update_company/:id", :controller => "companies", :action => "update"
-
-  # DELETE
-  get "/delete_company/:id", :controller => "companies", :action => "destroy"
-  #------------------------------
-
   # Routes for the Project resource:
   # CREATE
   get "/projects/start", :controller => "projects", :action => "start"
@@ -77,23 +44,6 @@ Rails.application.routes.draw do
 
   # DELETE
   get "/delete_project/:id", :controller => "projects", :action => "destroy"
-  #------------------------------
-
-  # Routes for the Client resource:
-  # CREATE
-  get "/clients/new", :controller => "clients", :action => "new"
-  post "/create_client", :controller => "clients", :action => "create"
-
-  # READ
-  get "/clients", :controller => "clients", :action => "index"
-  get "/clients/:id", :controller => "clients", :action => "show"
-
-  # UPDATE
-  get "/clients/:id/edit", :controller => "clients", :action => "edit"
-  post "/update_client/:id", :controller => "clients", :action => "update"
-
-  # DELETE
-  get "/delete_client/:id", :controller => "clients", :action => "destroy"
   #------------------------------
 
   ActiveAdmin.routes(self)

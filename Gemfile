@@ -58,3 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # add paperclip
 gem "carrierwave"
+
+#add devise
+gem 'devise'
