@@ -16506,3 +16506,2325 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 163ms (Views: 139.8ms | ActiveRecord: 2.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSubscriptions (20170519005940)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "subscriptions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stripe_id" varchar, "plan_id" integer, "last_four" varchar, "coupon_id" integer, "card_type" varchar, "current_price" float, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170519005940"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePlans (20170519005956)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "plans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "stripe_id" varchar, "price" float, "interval" varchar, "features" text, "highlight" boolean, "display_order" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170519005956"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCoupons (20170519010000)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "coupons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "free_trial_length" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170519010000"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mPlan Load (2.7ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "plans" ("name", "stripe_id", "price", "interval", "features", "display_order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Personal"], ["stripe_id", "1"], ["price", 10.0], ["interval", "month"], ["features", "1 Project\n\n1 Page\n\n1 User\n\n1 Organization"], ["display_order", 1], ["created_at", 2017-05-19 01:07:06 UTC], ["updated_at", 2017-05-19 01:07:06 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "plans" ("name", "stripe_id", "price", "interval", "features", "highlight", "display_order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Team"], ["stripe_id", "2"], ["price", 30.0], ["interval", "month"], ["features", "3 Projects\n\n3 Pages\n\n3 Users\n\n3 Organizations"], ["highlight", true], ["display_order", 2], ["created_at", 2017-05-19 01:07:16 UTC], ["updated_at", 2017-05-19 01:07:16 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "plans" ("name", "stripe_id", "price", "interval", "features", "display_order", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enterprise"], ["stripe_id", "3"], ["price", 100.0], ["interval", "month"], ["features", "10 Projects\n\n10 Pages\n\n10 Users\n\n10 Organizations"], ["display_order", 3], ["created_at", 2017-05-19 01:07:18 UTC], ["updated_at", 2017-05-19 01:07:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+Started GET "/" for ::1 at 2017-05-18 20:08:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 3861ms (Views: 3842.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for ::1 at 2017-05-18 20:08:24 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 139ms (Views: 137.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-18 20:08:25 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:4)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:6)
+Processing by Koudoku::SubscriptionsController#index as HTML
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/views/koudoku/subscriptions/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.7ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."display_order" ASC[0m
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/views/koudoku/subscriptions/_pricing_table.html.erb (272.5ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/views/koudoku/subscriptions/index.html.erb within layouts/application (276.1ms)
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `plan_price' for #<#<Class:0x007f969a693f38>:0x007f969a692b88>):
+    4:       <div class="thumbnail">
+    5:         <div class="caption">
+    6:           <h3><%= plan.name %></h3>
+    7:           <h4><%= plan_price(plan) %></h4>
+    8:           <div class="call-to-action">
+    9:             <% if @subscription.nil? %>
+   10:               <%= link_to Koudoku.free_trial? ? 'Start Trial' : 'Sign Up', koudoku.new_subscription_path(plan: plan.id), class: "btn btn-success btn-large" %>
+  
+koudoku (1.2.4) app/views/koudoku/subscriptions/_pricing_table.html.erb:7:in `block in ___sers__ick__rvm_gems_ruby_______gems_koudoku_______app_views_koudoku_subscriptions__pricing_table_html_erb___3160615328231647571_70142464680840'
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:38:in `each'
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:38:in `each'
+koudoku (1.2.4) app/views/koudoku/subscriptions/_pricing_table.html.erb:2:in `___sers__ick__rvm_gems_ruby_______gems_koudoku_______app_views_koudoku_subscriptions__pricing_table_html_erb___3160615328231647571_70142464680840'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/partial_renderer.rb:343:in `render_partial'
+actionview (5.0.2) lib/action_view/renderer/partial_renderer.rb:311:in `block in render'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+actionview (5.0.2) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+koudoku (1.2.4) app/views/koudoku/subscriptions/index.html.erb:2:in `___sers__ick__rvm_gems_ruby_______gems_koudoku_______app_views_koudoku_subscriptions_index_html_erb__1581254473064664692_70142471062520'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/Nick/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.2) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.3ms)
+Started GET "/card" for ::1 at 2017-05-18 20:09:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/card"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (22.8ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [1 times] (0.4ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (4.6ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.7ms)
+Started GET "/card" for ::1 at 2017-05-18 20:10:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/card"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (17.0ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [1 times] (0.4ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (4.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.4ms)
+Started GET "/pricing" for ::1 at 2017-05-18 20:10:32 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  Rendering koudoku/subscriptions/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."display_order" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (11.8ms)
+  Rendered koudoku/subscriptions/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 181ms (Views: 177.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/koudoku/subscriptions/new?plan=2" for ::1 at 2017-05-18 20:10:42 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"2"}
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-18 20:10:42 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 387ms (Views: 315.7ms | ActiveRecord: 39.8ms)
+
+
+Started POST "/users" for ::1 at 2017-05-18 20:10:54 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bpNp/6YylBpxyU4CVaSetRy3f7oX+k4rEIS0rXsSWMvyDZ5dp+u4fFTxzKYoIoL/AR8FAGuATAfKpIYeImSLYg==", "user"=>{"email"=>"test@llobe.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@llobe.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@llobe.com"], ["encrypted_password", "$2a$11$sC3NoeZB99swBK.QmKt8g.Ms1QXybJ6yOTANAk2S/AZIqWmFvIpNu"], ["created_at", 2017-05-19 01:10:54 UTC], ["updated_at", 2017-05-19 01:10:54 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-05-19 01:10:54 UTC], ["last_sign_in_at", 2017-05-19 01:10:54 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-05-19 01:10:54 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/subscriptions/new?plan=2
+Completed 302 Found in 189ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/koudoku/subscriptions/new?plan=2" for ::1 at 2017-05-18 20:10:54 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/new?plan=2
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/new?plan=2" for ::1 at 2017-05-18 20:10:54 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"2", "owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.4ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/new.html.erb within layouts/application
+  Rendered koudoku/subscriptions/_card.html.erb (3.5ms)
+  Rendered koudoku/subscriptions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 240ms (Views: 204.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/koudoku/users/1/subscriptions" for ::1 at 2017-05-18 20:11:37 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XQi+DPQTGT1FWPAguM0ZBr68lsPA4edZAf0pGTa1mEXBlkmu9co1W2BgcoTFSwVMoxTsebyb5XXb3Ruqb8NL7A==", "subscription"=>{"plan_id"=>"2"}, "owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 1.0ms)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+stripe (2.9.0) lib/stripe/stripe_client.rb:168:in `check_api_key!'
+stripe (2.9.0) lib/stripe/stripe_client.rb:118:in `execute_request'
+stripe (2.9.0) lib/stripe/api_operations/request.rb:17:in `request'
+stripe (2.9.0) lib/stripe/api_operations/create.rb:5:in `create'
+koudoku (1.2.4) app/concerns/koudoku/subscription.rb:86:in `processing!'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:770:in `block (2 levels) in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `catch'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `block in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+koudoku (1.2.4) app/controllers/koudoku/subscriptions_controller.rb:122:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.2ms)
+Started POST "/koudoku/users/1/subscriptions" for ::1 at 2017-05-18 20:14:49 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XQi+DPQTGT1FWPAguM0ZBr68lsPA4edZAf0pGTa1mEXBlkmu9co1W2BgcoTFSwVMoxTsebyb5XXb3Ruqb8NL7A==", "subscription"=>{"plan_id"=>"2"}, "owner_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.4ms)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+stripe (2.9.0) lib/stripe/stripe_client.rb:168:in `check_api_key!'
+stripe (2.9.0) lib/stripe/stripe_client.rb:118:in `execute_request'
+stripe (2.9.0) lib/stripe/api_operations/request.rb:17:in `request'
+stripe (2.9.0) lib/stripe/api_operations/create.rb:5:in `create'
+koudoku (1.2.4) app/concerns/koudoku/subscription.rb:86:in `processing!'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:770:in `block (2 levels) in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `catch'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `block in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+koudoku (1.2.4) app/controllers/koudoku/subscriptions_controller.rb:122:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
+Started GET "/koudoku/users/1/subscriptions/new?plan=2" for ::1 at 2017-05-18 20:15:20 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"2", "owner_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/new.html.erb within layouts/application
+  Rendered koudoku/subscriptions/_card.html.erb (3.1ms)
+  Rendered koudoku/subscriptions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 221ms (Views: 213.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/koudoku/users/1/subscriptions" for ::1 at 2017-05-18 20:15:28 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aZ+NTUTwzAr2q5k2LnJcIq5JpgIV//YO7tVPyPJD6TL1AXrvRSngbNOTG5JT9EBos+HcuGmF9CI09X17qzU6mw==", "subscription"=>{"plan_id"=>"2"}, "owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+stripe (2.9.0) lib/stripe/stripe_client.rb:168:in `check_api_key!'
+stripe (2.9.0) lib/stripe/stripe_client.rb:118:in `execute_request'
+stripe (2.9.0) lib/stripe/api_operations/request.rb:17:in `request'
+stripe (2.9.0) lib/stripe/api_operations/create.rb:5:in `create'
+koudoku (1.2.4) app/concerns/koudoku/subscription.rb:86:in `processing!'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:770:in `block (2 levels) in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `catch'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `block in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+koudoku (1.2.4) app/controllers/koudoku/subscriptions_controller.rb:122:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.8ms)
+Started POST "/koudoku/users/1/subscriptions" for ::1 at 2017-05-18 20:16:38 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aZ+NTUTwzAr2q5k2LnJcIq5JpgIV//YO7tVPyPJD6TL1AXrvRSngbNOTG5JT9EBos+HcuGmF9CI09X17qzU6mw==", "subscription"=>{"plan_id"=>"2"}, "owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+stripe (2.9.0) lib/stripe/stripe_client.rb:168:in `check_api_key!'
+stripe (2.9.0) lib/stripe/stripe_client.rb:118:in `execute_request'
+stripe (2.9.0) lib/stripe/api_operations/request.rb:17:in `request'
+stripe (2.9.0) lib/stripe/api_operations/create.rb:5:in `create'
+koudoku (1.2.4) app/concerns/koudoku/subscription.rb:86:in `processing!'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:770:in `block (2 levels) in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `catch'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `block in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+koudoku (1.2.4) app/controllers/koudoku/subscriptions_controller.rb:122:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.2ms)
+Started GET "/" for ::1 at 2017-05-18 20:18:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 890ms (Views: 871.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for ::1 at 2017-05-18 20:18:19 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 132ms (Views: 130.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-18 20:18:22 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:4)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:6)
+Processing by Koudoku::SubscriptionsController#index as HTML
+  Rendering koudoku/subscriptions/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."display_order" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (20.9ms)
+  Rendered koudoku/subscriptions/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 284ms (Views: 266.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/koudoku/subscriptions/new?plan=1" for ::1 at 2017-05-18 20:18:24 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"1"}
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-18 20:18:24 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 272ms (Views: 199.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2017-05-18 20:18:32 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ACYORUFSw6yiMcIlHw68Sj7TzKdD3GaGsQAGAzD3sARHRHHWKV8NN2yE1loAmAkzVx2yCyMi2YZTNsqNNvZNbA==", "user"=>{"email"=>"test@llobe.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@llobe.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 339ms (Views: 178.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-05-18 20:18:36 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 285ms (Views: 283.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-05-18 20:18:38 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7rOZLXwU3hghmOptks0cE+uDbaF7G/hoJe6JWngsGxQ2LH33f2d464zd9ap3YEJJmBzGuUS0OFCoXarb+FNBA==", "user"=>{"email"=>"test@llobe.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@llobe.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 130ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7rOZLXwU3hghmOptks0cE+uDbaF7G/hoJe6JWngsGxQ2LH33f2d464zd9ap3YEJJmBzGuUS0OFCoXarb+FNBA==", "user"=>{"email"=>"test@llobe.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 289ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-05-18 20:18:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NoJCJ9/kaAVrXsCndJeO7poTXHGkPMV4uf8h6pehcN1x4D20t+mmnqXr1NhrATuX890i3cTCenhbye1kkaCNtQ==", "user"=>{"email"=>"test@llobe.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@llobe.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-19 01:18:41 UTC], ["sign_in_count", 2], ["updated_at", 2017-05-19 01:18:41 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/subscriptions/new?plan=1
+Completed 302 Found in 157ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/koudoku/subscriptions/new?plan=1" for ::1 at 2017-05-18 20:18:41 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/new?plan=1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/new?plan=1" for ::1 at 2017-05-18 20:18:41 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"1", "owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/new.html.erb within layouts/application
+  Rendered koudoku/subscriptions/_card.html.erb (2.8ms)
+  Rendered koudoku/subscriptions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 209ms (Views: 172.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/koudoku/users/1/subscriptions" for ::1 at 2017-05-18 20:18:56 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/LvVo+sHOVymuzVyJJ38RmBNVHa4Z+dBzHpOeOp4t2MLl9Rw3e2nrRxm7OzIXDHCiZP1WRRmRhKEsUUjb4FylA==", "subscription"=>{"plan_id"=>"1", "credit_card_token"=>"tok_1AKzlcGKnNwMfH1fQ2NPGJ6X", "last_four"=>"undefined", "card_type"=>"undefined"}, "owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "subscriptions" ("stripe_id", "plan_id", "last_four", "card_type", "current_price", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["stripe_id", "cus_AgMUQfd1VuHDaF"], ["plan_id", 1], ["last_four", "4242"], ["card_type", "undefined"], ["current_price", 10.0], ["user_id", 1], ["created_at", 2017-05-19 01:18:58 UTC], ["updated_at", 2017-05-19 01:18:58 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 1827ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:18:58 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 174ms (Views: 164.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:19:09 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.6ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (44.2ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 266ms (Views: 254.1ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:19:15 -0500
+Processing by Koudoku::SubscriptionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gPcX3FlOhfA3V0dGPTbf2+WKGzjMRgDC1spzRzxjUEd32xYPb6QbAY2KntjR9xJfDFS6F2BHoZGeAXgcuZqVsA==", "subscription"=>{"plan_id"=>"2"}, "commit"=>"Upgrade", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", 2], ["current_price", 30.0], ["updated_at", 2017-05-19 01:19:16 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 1030ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:19:16 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 181ms (Views: 172.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit?update=card" for ::1 at 2017-05-18 20:19:33 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"update"=>"card", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  Rendered koudoku/subscriptions/_card.html.erb (2.3ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 214ms (Views: 204.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/koudoku/users/1/subscriptions" for ::1 at 2017-05-18 20:19:55 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  Parameters: {"owner_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Filter chain halted as :show_existing_subscription rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:19:55 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 248ms (Views: 240.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/koudoku/" for ::1 at 2017-05-18 20:19:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/koudoku"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (16.4ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [1 times] (0.6ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (3.7ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (153.4ms)
+Started GET "/koudoku/users/1/" for ::1 at 2017-05-18 20:20:05 -0500
+  
+ActionController::RoutingError (uninitialized constant Koudoku::UsersController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:270:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:270:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (18.6ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [1 times] (0.6ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (4.0ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (144.1ms)
+Started GET "/pricing" for ::1 at 2017-05-18 20:20:17 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:20:17 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.3ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (6.1ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 189ms (Views: 183.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/koudoku/users/1/subscriptions/1/cancel" for ::1 at 2017-05-18 20:20:24 -0500
+Processing by Koudoku::SubscriptionsController#cancel as HTML
+  Parameters: {"authenticity_token"=>"1itBoobQbUMrjbcHI1uGU3ppA6HLd1kjY/TlyFl1JKohB0BxsDrzspFQbpnPmkvXk7eijmd2+HArP+6T3IzhXQ==", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", nil], ["current_price", nil], ["updated_at", 2017-05-19 01:20:25 UTC], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 900ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:20:25 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 190ms (Views: 183.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-18 20:22:02 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:22:02 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.3ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (6.3ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 214ms (Views: 208.4ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mSubscription Load (1.6ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+Started PATCH "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:25:20 -0500
+Processing by Koudoku::SubscriptionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NA6jwRAsEBGCAqbllsAcuRw2hOKn2pXx85cCwUt9qoDDIqISJsaO4Djff3t6AdE99eglzQvbNKK7XAmazoRvdw==", "subscription"=>{"plan_id"=>"1"}, "commit"=>"Upgrade", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", 1], ["current_price", 10.0], ["updated_at", 2017-05-19 01:25:21 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 1173ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:25:21 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (1.9ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 274ms (Views: 261.2ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT "subscriptions".* FROM "subscriptions"[0m
+Started GET "/koudoku/users/1/subscriptions/2" for ::1 at 2017-05-18 20:32:51 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.8ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/unauthorized.html.erb within layouts/application
+  Rendered koudoku/subscriptions/unauthorized.html.erb within layouts/application (3.9ms)
+Filter chain halted as :load_subscription rendered or redirected
+Completed 401 Unauthorized in 438ms (Views: 409.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/koudoku/users/2/subscriptions/2" for ::1 at 2017-05-18 20:32:59 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"2", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/unauthorized.html.erb within layouts/application
+  Rendered koudoku/subscriptions/unauthorized.html.erb within layouts/application (0.5ms)
+Filter chain halted as :load_owner rendered or redirected
+Completed 401 Unauthorized in 180ms (Views: 177.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-18 20:33:05 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 226ms (Views: 221.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-18 20:34:14 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 262ms (Views: 261.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-18 20:34:35 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:34:35 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.4ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (9.1ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 182ms (Views: 174.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:37:41 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.6ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (7.2ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 239ms (Views: 228.6ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:37:48 -0500
+Processing by Koudoku::SubscriptionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"40qQsOBNRyvMLewnOoYjv/7a4v6J4waENwZlZ8g7DtIUZpFj1qfZ2nbwNbnWR+47FwRD0SXip9d/zW48TcLLJQ==", "subscription"=>{"plan_id"=>"3"}, "commit"=>"Upgrade", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (2.8ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", 3], ["current_price", 100.0], ["updated_at", 2017-05-19 01:37:49 UTC], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 1305ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:37:49 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 168ms (Views: 163.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:37:54 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.6ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (21.0ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 300ms (Views: 291.7ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:37:55 -0500
+Processing by Koudoku::SubscriptionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x+NM8OJez6JBkYJo00p2OKzCyylUOh1BPhv4qcV6A4wwz00j1LRRU/tMW/Y/i7u8RRxqBvg7vBJ20PPyQIPGew==", "subscription"=>{"plan_id"=>"2"}, "commit"=>"Downgrade", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", 2], ["current_price", 30.0], ["updated_at", 2017-05-19 01:37:57 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 1155ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:37:57 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 182ms (Views: 174.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:45:50 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (24.3ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 438ms (Views: 403.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:46:08 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.8ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (339.3ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (341.7ms)
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `plan_price' for #<#<Class:0x007fdc6af07d98>:0x007fdc6b5699e8>):
+    4:       <div class="thumbnail">
+    5:         <div class="caption">
+    6:           <h3><%= plan.name %></h3>
+    7:           <h4><%= plan_price(plan) %></h4>
+    8:           <div class="call-to-action">
+    9:             <% if @subscription.nil? %>
+   10:               <%= link_to Koudoku.free_trial? ? 'Start Trial' : 'Sign Up', koudoku.new_subscription_path(plan: plan.id), class: "btn btn-success btn-large" %>
+  
+app/views/koudoku/subscriptions/_pricing_table.html.erb:7:in `block in _app_views_koudoku_subscriptions__pricing_table_html_erb__3994252216303634751_70292331319820'
+app/views/koudoku/subscriptions/_pricing_table.html.erb:2:in `_app_views_koudoku_subscriptions__pricing_table_html_erb__3994252216303634751_70292331319820'
+app/views/koudoku/subscriptions/edit.html.erb:5:in `_app_views_koudoku_subscriptions_edit_html_erb___4609712951367906431_70292335187260'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.4ms)
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:47:06 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:4)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:6)
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.6ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (31.9ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 318ms (Views: 275.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:48:19 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (14.4ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 255ms (Views: 245.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/koudoku/users/1/subscriptions/1/cancel" for ::1 at 2017-05-18 20:48:24 -0500
+Processing by Koudoku::SubscriptionsController#cancel as HTML
+  Parameters: {"authenticity_token"=>"SwWR235uKpPd9gErhu8jyLQ5O90q3C3dkzCxtTPs8b+8KZAISIS0Ymcr2LVqLu5MXeea8obdjI7b+7ruthU0SA==", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.4ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", nil], ["current_price", nil], ["updated_at", 2017-05-19 01:48:25 UTC], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 896ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:48:25 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 190ms (Views: 180.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:48:27 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (2.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (56.8ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 235ms (Views: 224.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:49:13 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.6ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (10.8ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 186ms (Views: 179.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:49:17 -0500
+Processing by Koudoku::SubscriptionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fbsDC96JrNmTKHElTlJaIcSkI/W+bueRbvgYh9452faKlwLY6GMyKCn1qLuik5elLXqC2hJvRsImMxPcW8AcAQ==", "subscription"=>{"plan_id"=>"2"}, "commit"=>"Choose", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.4ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", 2], ["current_price", 30.0], ["updated_at", 2017-05-19 01:49:19 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 1665ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-18 20:49:19 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 178ms (Views: 170.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-18 20:49:21 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (24.3ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 238ms (Views: 231.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-18 20:49:58 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 264ms (Views: 247.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-05-23 08:33:40 -0500
+Processing by ProjectsController#index as HTML
+Started GET "/pricing" for ::1 at 2017-05-23 08:33:42 -0500
+  Rendering projects/index.html.erb within layouts/application
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[35m (120.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (639.2ms)
+  [1m[36mSubscription Load (9.7ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Started GET "/pricing" for ::1 at 2017-05-23 08:33:45 -0500
+Completed 302 Found in 2138ms (ActiveRecord: 25.5ms)
+
+
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (2.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 769ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-23 08:33:47 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (1.7ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (3.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (113.0ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (658.2ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (824.3ms)
+Completed 200 OK in 3019ms (Views: 2696.6ms | ActiveRecord: 10.8ms)
+
+
+Completed 200 OK in 8325ms (Views: 7789.9ms | ActiveRecord: 120.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-23 08:40:45 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 897ms (Views: 878.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for ::1 at 2017-05-23 08:41:04 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 282ms (Views: 279.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-23 08:41:07 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (1.8ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-23 08:41:08 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.9ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (1.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (13.8ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 277ms (Views: 268.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-23 08:41:09 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-23 08:41:09 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.6ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (15.2ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 278ms (Views: 270.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-23 11:58:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.9ms)
+Started GET "/" for ::1 at 2017-05-23 11:58:49 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 1312ms (Views: 1294.8ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 555ms (Views: 552.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new?project_type=Website+Update" for ::1 at 2017-05-23 11:59:11 -0500
+Processing by ProjectsController#new as HTML
+  Parameters: {"project_type"=>"Website Update"}
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 409ms (Views: 394.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/create_project" for ::1 at 2017-05-23 11:59:18 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"pySXbDSH6rKToVFustFONwY7Cv6y4c4kKHE+B2e3X8FQCJa/Am10Qyl8iPBeEIOz7+Wr0R7gb3dgujVc4k6aNg==", "title"=>"Test", "project_type"=>"Website Update", "description"=>"ddd", "status"=>"Not Started", "version"=>"1.0", "hours_used"=>"0"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "projects" ("title", "project_type", "description", "status", "version", "hours_used", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Test"], ["project_type", "Website Update"], ["description", "ddd"], ["status", "Not Started"], ["version", 1.0], ["hours_used", 0.0], ["created_at", 2017-05-23 16:59:18 UTC], ["updated_at", 2017-05-23 16:59:18 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/new/18
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/items/new/18" for ::1 at 2017-05-23 11:59:18 -0500
+Processing by ItemsController#new as HTML
+  Parameters: {"project_id"=>"18"}
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 217ms (Views: 198.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/create_item" for ::1 at 2017-05-23 11:59:34 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"RFxtaQCaGDZqRKqf6JZLTLytUOPF6fNO2LglZ+hIqBGzcGy6NnCGx9CZcwEEV4bIVXPxzGnoUh2Qcy48bbFt5g==", "name"=>"", "project_id"=>"18", "url"=>#<ActionDispatch::Http::UploadedFile:0x007fd7b58db4b0 @tempfile=#<Tempfile:/var/folders/9m/vrg11q411fzbdwxq37x6q73r0000gn/T/RackMultipart20170523-70817-s5xtp0.jpg>, @original_filename="val.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"url\"; filename=\"val.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"test"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("project_id", "name", "description", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["project_id", 18], ["name", "val.jpg"], ["description", "test"], ["url", "val.jpg"], ["created_at", 2017-05-23 16:59:34 UTC], ["updated_at", 2017-05-23 16:59:34 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/items/add/18
+Completed 302 Found in 46ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/items/add/18" for ::1 at 2017-05-23 11:59:34 -0500
+Processing by ItemsController#add as HTML
+  Parameters: {"project_id"=>"18"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering items/add.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."project_id" = ?[0m  [["project_id", 18]]
+  Rendered items/add.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 269ms (Views: 258.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/review/18" for ::1 at 2017-05-23 11:59:40 -0500
+Processing by ProjectsController#review as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering projects/review.html.erb within layouts/application
+  Rendered projects/review.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 380ms (Views: 375.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-05-23 11:59:44 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 351ms (Views: 349.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-23 12:03:11 -0500
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:4)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:SubscriptionsController> at /Users/Nick/.rvm/gems/ruby-2.3.3/gems/koudoku-1.2.4/app/controllers/koudoku/subscriptions_controller.rb:6)
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.7ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 302 Found in 180ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-23 12:03:12 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.4ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (59.8ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (65.4ms)
+Started GET "/pricing" for ::1 at 2017-05-23 12:03:12 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1/edit
+Completed 200 OK in 400ms (Views: 388.9ms | ActiveRecord: 2.7ms)
+
+
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1/edit" for ::1 at 2017-05-23 12:03:12 -0500
+Processing by Koudoku::SubscriptionsController#edit as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/edit.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."price" ASC[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.4ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (9.5ms)
+  Rendered koudoku/subscriptions/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 300ms (Views: 288.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-23 12:03:28 -0500
+Processing by Koudoku::SubscriptionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1l5YhUqdresUkQAcDH/RAnQ5Qp17AGVQv+CLsz0UwdAhcllWfHczGq5M2YLgvhyGnefjstcBxAP3K4DouO0EJw==", "subscription"=>{"plan_id"=>"1"}, "commit"=>"Choose", "owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "subscriptions" SET "plan_id" = ?, "current_price" = ?, "updated_at" = ? WHERE "subscriptions"."id" = ?[0m  [["plan_id", 1], ["current_price", 10.0], ["updated_at", 2017-05-23 17:03:29 UTC], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/1/subscriptions/1
+Completed 302 Found in 914ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/koudoku/users/1/subscriptions/1" for ::1 at 2017-05-23 12:03:29 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 192ms (Views: 182.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2017-05-23 12:03:47 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 232ms (Views: 226.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-23 12:03:47 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 216ms (Views: 215.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sign_in" for ::1 at 2017-05-23 12:03:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (37.6ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [1 times] (0.4ms)
+  Rendered collection of /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (8.9ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (181.6ms)
+Started GET "/users/sign_in" for ::1 at 2017-05-23 12:04:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+Started GET "/users/sign_in" for ::1 at 2017-05-23 12:04:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.7ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 427ms (Views: 424.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 517ms (Views: 500.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-05-23 12:04:08 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qee48tHEdAlp0Fx1aXTHIIdq7YqT8OIwopMTP3AhMUOh7EALkIJwxOzr1wC6hVdIachyn2KNItQoJbFcO6vHxA==", "user"=>{"email"=>"nick@llobe.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nick@llobe.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qee48tHEdAlp0Fx1aXTHIIdq7YqT8OIwopMTP3AhMUOh7EALkIJwxOzr1wC6hVdIachyn2KNItQoJbFcO6vHxA==", "user"=>{"email"=>"nick@llobe.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 370ms (Views: 229.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-05-23 12:04:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 159ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-05-23 12:04:19 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oiTJxxHxps67YgeOtyJZR4pw0R9jZTdOmmJ4Rf6upEeqLzE+ULeiAz5ZjPtk08kvZNJOCpIY96oQ1NomtSRSwA==", "user"=>{"email"=>"alice@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "alice@example.com"], ["encrypted_password", "$2a$11$bl4ZNeqYI2Y.2JtuMknVieyqpokoB2XwtxeKIPVG3Jx1/VVYyn5oK"], ["created_at", 2017-05-23 17:04:19 UTC], ["updated_at", 2017-05-23 17:04:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-05-23 17:04:19 UTC], ["last_sign_in_at", 2017-05-23 17:04:19 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-05-23 17:04:19 UTC], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 196ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-23 12:04:19 -0500
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 158ms (Views: 157.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pricing" for ::1 at 2017-05-23 12:04:24 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.4ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."display_order" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.7ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (9.7ms)
+  Rendered koudoku/subscriptions/index.html.erb within layouts/application (12.7ms)
+Started GET "/pricing" for ::1 at 2017-05-23 12:04:24 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."display_order" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.6ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (17.5ms)
+  Rendered koudoku/subscriptions/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 305ms (Views: 296.5ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 303ms (Views: 290.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/koudoku/subscriptions/new?plan=1" for ::1 at 2017-05-23 12:04:29 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/2/subscriptions/new?plan=1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/koudoku/users/2/subscriptions/new?plan=1" for ::1 at 2017-05-23 12:04:29 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"1", "owner_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/new.html.erb within layouts/application
+  Rendered koudoku/subscriptions/_card.html.erb (3.6ms)
+  Rendered koudoku/subscriptions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 159ms (Views: 152.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/koudoku/users/2/subscriptions" for ::1 at 2017-05-23 12:04:51 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zYk7l7dzK1YOT4dZbbnzLVGdibNVtDW4d8Us8vzTg0DFgsNu9jUvm4t0DCy+SGNFvz8WpqTJ9Vz9c46Rt1l1xw==", "subscription"=>{"plan_id"=>"1"}, "owner_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 656ms (ActiveRecord: 1.1ms)
+
+
+  
+Stripe::InvalidRequestError (This customer has no attached payment source):
+  
+stripe (2.9.0) lib/stripe/stripe_client.rb:253:in `handle_error_response'
+stripe (2.9.0) lib/stripe/stripe_client.rb:200:in `rescue in execute_request_with_rescues'
+stripe (2.9.0) lib/stripe/stripe_client.rb:184:in `execute_request_with_rescues'
+stripe (2.9.0) lib/stripe/stripe_client.rb:136:in `execute_request'
+stripe (2.9.0) lib/stripe/api_operations/request.rb:17:in `request'
+stripe (2.9.0) lib/stripe/api_operations/request.rb:43:in `request'
+stripe (2.9.0) lib/stripe/customer.rb:49:in `update_subscription'
+koudoku (1.2.4) app/concerns/koudoku/subscription.rb:89:in `processing!'
+activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.2) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:770:in `block (2 levels) in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `catch'
+activesupport (5.0.2) lib/active_support/callbacks.rb:769:in `block in deprecated_false_terminator'
+activesupport (5.0.2) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.2) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.2) lib/active_record/persistence.rb:125:in `save'
+activerecord (5.0.2) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.2) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.2) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.2) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.2) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.2) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.2) lib/active_record/suppressor.rb:41:in `save'
+koudoku (1.2.4) app/controllers/koudoku/subscriptions_controller.rb:122:in `create'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+railties (5.0.2) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.2) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/Nick/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.0ms)
+Started GET "/pricing" for ::1 at 2017-05-23 12:06:42 -0500
+Processing by Koudoku::SubscriptionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans" ORDER BY "plans"."display_order" ASC[0m
+  Rendered koudoku/subscriptions/_social_proof.html.erb (0.5ms)
+  Rendered koudoku/subscriptions/_pricing_table.html.erb (7.8ms)
+  Rendered koudoku/subscriptions/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 233ms (Views: 217.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/koudoku/subscriptions/new?plan=2" for ::1 at 2017-05-23 12:13:09 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"2"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/koudoku/users/2/subscriptions/new?plan=2
+Completed 302 Found in 50ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/koudoku/users/2/subscriptions/new?plan=2" for ::1 at 2017-05-23 12:13:10 -0500
+Processing by Koudoku::SubscriptionsController#new as HTML
+  Parameters: {"plan"=>"2", "owner_id"=>"2"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/new.html.erb within layouts/application
+  Rendered koudoku/subscriptions/_card.html.erb (15.1ms)
+  Rendered koudoku/subscriptions/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 461ms (Views: 423.2ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/koudoku/users/2/subscriptions" for ::1 at 2017-05-23 12:13:40 -0500
+Processing by Koudoku::SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RDjINaspZDIS5S799wapD677zUa8Dxf52cc/FhkgjeNMMzDM6m9g/5fepYgk9zlnQFlSU01y1x1TcZ11Uqp7ZA==", "subscription"=>{"plan_id"=>"2", "credit_card_token"=>"tok_1AMgZkGKnNwMfH1f1YNozuLK", "last_four"=>"undefined", "card_type"=>"undefined"}, "owner_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "subscriptions" ("stripe_id", "plan_id", "last_four", "card_type", "current_price", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["stripe_id", "cus_Ai6n0HSRARleuG"], ["plan_id", 2], ["last_four", "4242"], ["card_type", "undefined"], ["current_price", 30.0], ["user_id", 2], ["created_at", 2017-05-23 17:13:42 UTC], ["updated_at", 2017-05-23 17:13:42 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/koudoku/users/2/subscriptions/2
+Completed 302 Found in 1593ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/koudoku/users/2/subscriptions/2" for ::1 at 2017-05-23 12:13:42 -0500
+Processing by Koudoku::SubscriptionsController#show as HTML
+  Parameters: {"owner_id"=>"2", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ? AND "subscriptions"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  Rendering koudoku/subscriptions/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered koudoku/subscriptions/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 211ms (Views: 205.2ms | ActiveRecord: 0.6ms)
+
+

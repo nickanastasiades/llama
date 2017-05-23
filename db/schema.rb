@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519003602) do
+ActiveRecord::Schema.define(version: 20170519010000) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(version: 20170519003602) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "coupons", force: :cascade do |t|
+    t.string   "code"
+    t.string   "free_trial_length"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
   create_table "designers", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -64,6 +71,18 @@ ActiveRecord::Schema.define(version: 20170519003602) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.string   "stripe_id"
+    t.float    "price"
+    t.string   "interval"
+    t.text     "features"
+    t.boolean  "highlight"
+    t.integer  "display_order"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "project_type"
@@ -74,6 +93,18 @@ ActiveRecord::Schema.define(version: 20170519003602) do
     t.float    "hours_used"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.string   "stripe_id"
+    t.integer  "plan_id"
+    t.string   "last_four"
+    t.integer  "coupon_id"
+    t.string   "card_type"
+    t.float    "current_price"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
